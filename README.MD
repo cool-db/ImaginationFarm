@@ -22,7 +22,7 @@ Design Patterns
 12生肖使用枚举实现了单例模式（最佳实现）
 Logger使用static实现了单例模式
 ```
-- [ ] 建造者模式（Builder Pattern）
+- [x] 建造者模式（Builder Pattern）
 ```
 早餐 todo rename
 ```
@@ -59,7 +59,7 @@ todo 日志系统，loglevel
 - [ ] 观察者模式（Observer Pattern）
 - [ ] 状态模式（State Pattern）
 - [ ] 空对象模式（Null Object Pattern）
-- [ ] 策略模式（Strategy Pattern）
+- [x] 策略模式（Strategy Pattern）
 ```
 日志系统，不同的log格式
 ```
