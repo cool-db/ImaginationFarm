@@ -1,4 +1,6 @@
 package imaginationfarm.story.BakeCake;
+import imaginationfarm.spirit.Cakes.*;
+import imaginationfarm.abst.Cake.*;
 
 public class BakeCake {
 	public void bakeCake() {

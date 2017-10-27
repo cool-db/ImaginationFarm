@@ -1,9 +1,10 @@
 package imaginationfarm.spirit.Cakes;
+import imaginationfarm.abst.Cake.*;
 
 public class ChocolateCake extends Cake {
 
 	int _id;
-	static int _count=0;
+	public static int _count=0;
 	static ChocolateCake _chocolatePrototype;
 	
 	static {
