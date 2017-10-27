@@ -1,4 +1,4 @@
-package imaginationfarm.abst.Cake;
+package imaginationfarm.abst.cake;
 public abstract class Cake {
 	
 	private static Cake[] _prototypes = new Cake[10];
@@ -8,7 +8,7 @@ public abstract class Cake {
 	protected abstract CakeType returnType();
 	
 	protected static void addPrototype(Cake newCake) {
-		System.out.println("Cake: addPrototype: " + newCake.returnType() + " prototype is made");
+		System.out.println("cake: addPrototype: " + newCake.returnType() + " prototype is made");
 		_prototypes[_nextSlot] = newCake;
 		_nextSlot++;
 	}
@@ -24,7 +24,7 @@ public abstract class Cake {
 	public abstract void bake();
 	
 	protected void finalize() {
-		System.out.println("Cake: finalize: destruct");
+		System.out.println("cake: finalize: destruct");
 	}
 }
 

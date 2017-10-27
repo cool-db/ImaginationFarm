@@ -7,12 +7,13 @@ import imaginationfarm.spirit.creature.CreatureFactory;
 import imaginationfarm.spirit.creature.FactoryProducer;
 import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.MealBuilder;
+import imaginationfarm.story.bakeCake.BakeCake;
 import org.testng.annotations.Test;
 
 public class FarmTest {
 
     @Test
-    public void Logger() {
+    public void TestLogger() {
         Logger.addLogAdapter(new CommonLogAdapter());
         Logger.d("debug");
         Logger.e("error");
@@ -23,7 +24,7 @@ public class FarmTest {
     }
 
     @Test
-    public void Breakfirst() {
+    public void TestBreakfirst() {
         MealBuilder mealBuilder = new MealBuilder();
 
         Meal vegMeal = mealBuilder.prepareVegMeal();
@@ -37,4 +38,9 @@ public class FarmTest {
         System.out.println("Total Cost: " +nonVegMeal.getCost());
     }
 
+    @Test
+    public static void TestBakeCake() {
+        BakeCake bCake=new BakeCake();
+        bCake.bakeCake();
+    }
 }

@@ -1,5 +1,5 @@
-package imaginationfarm.spirit.Cakes;
-import imaginationfarm.abst.Cake.*;
+package imaginationfarm.spirit.cakes;
+import imaginationfarm.abst.cake.*;
 
 public class ChocolateCake extends Cake {
 
