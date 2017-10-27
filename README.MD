@@ -26,7 +26,7 @@ Logger使用static实现了单例模式
 ```
 早餐 todo rename
 ```
-- [ ] 原型模式（Prototype Pattern）
+- [ ] 原型模式（Prototype Pattern）朱安琪
 ```
 todo 下蛋
 ```
@@ -38,13 +38,13 @@ todo 下蛋
 日志系统，适配不同的log模式
 ```
 - [ ] 桥接模式（Bridge Pattern）
-- [ ] 过滤器模式（Filter、Criteria Pattern）
+- [ ] 过滤器模式（Filter、Criteria Pattern）邱宇航  
 ```
 todo 日志系统，loglevel
 ```
 - [ ] 组合模式（Composite Pattern）
-- [ ] 装饰器模式（Decorator Pattern）
-- [ ] 外观模式（Facade Pattern）
+- [ ] 装饰器模式（Decorator Pattern）邱宇航  
+- [ ] 外观模式（Facade Pattern）邱宇航  
 - [ ] 享元模式（Flyweight Pattern）
 - [ ] 代理模式（Proxy Pattern）
 
@@ -53,7 +53,7 @@ todo 日志系统，loglevel
 - [ ] 责任链模式（Chain of Responsibility Pattern）
 - [ ] 命令模式（Command Pattern）
 - [ ] 解释器模式（Interpreter Pattern）
-- [ ] 迭代器模式（Iterator Pattern）
+- [ ] 迭代器模式（Iterator Pattern）邱宇航
 - [ ] 中介者模式（Mediator Pattern）
 - [ ] 备忘录模式（Memento Pattern）
 - [ ] 观察者模式（Observer Pattern）
@@ -64,7 +64,7 @@ todo 日志系统，loglevel
 日志系统，不同的log格式
 ```
 - [ ] 模板模式（Template Pattern）
-访问者模式（Visitor Pattern）
+- [ ] 访问者模式（Visitor Pattern）
 
 **J2EE 模式**  
 *这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。*
