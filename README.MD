@@ -26,8 +26,9 @@ Logger使用static实现了单例模式
 ```
 早餐 todo rename
 ```
-- [ ] 原型模式（Prototype Pattern）朱安琪
+- [x] 原型模式（Prototype Pattern）朱安琪
 ```
+蛋糕
 todo 下蛋
 ```
 
