@@ -1,10 +1,5 @@
-import imaginationfarm.abst.logger.CommonFormatStrategy;
 import imaginationfarm.abst.logger.CommonLogAdapter;
 import imaginationfarm.abst.logger.Logger;
-import imaginationfarm.abst.logger.PrintLogStrategy;
-import imaginationfarm.spirit.creature.Animal.AnimalFactory;
-import imaginationfarm.spirit.creature.CreatureFactory;
-import imaginationfarm.spirit.creature.FactoryProducer;
 import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.MealBuilder;
 import imaginationfarm.story.bakeCake.BakeCake;

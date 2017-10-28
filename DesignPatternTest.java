@@ -1,9 +1,8 @@
-import imaginationfarm.abst.logger.CommonFormatStrategy;
-import imaginationfarm.abst.logger.CommonLogAdapter;
-import imaginationfarm.abst.logger.Logger;
-import imaginationfarm.spirit.creature.Animal.AnimalFactory;
+import imaginationfarm.spirit.charactor.ChineseZodiacs;
+import imaginationfarm.spirit.creature.animal.AnimalFactory;
 import imaginationfarm.spirit.creature.CreatureFactory;
 import imaginationfarm.spirit.creature.FactoryProducer;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DesignPatternTest {
@@ -24,7 +23,7 @@ public class DesignPatternTest {
 
     @Test
     public void Singleton() {
-
+        Assert.assertTrue(ChineseZodiacs.INSTANCE.getChineseZodiac("rat")==ChineseZodiacs.INSTANCE.getChineseZodiac("rat"));
     }
 
     @Test

@@ -1,6 +1,6 @@
-package imaginationfarm.spirit.creature.Crop;
+package imaginationfarm.spirit.creature.crop;
 
-import imaginationfarm.spirit.creature.Animal.Animal;
+import imaginationfarm.spirit.creature.animal.Animal;
 import imaginationfarm.spirit.creature.Creature;
 import imaginationfarm.spirit.creature.CreatureFactory;
 
