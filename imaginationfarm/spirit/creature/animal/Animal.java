@@ -1,4 +1,4 @@
-package imaginationfarm.spirit.creature.Animal;
+package imaginationfarm.spirit.creature.animal;
 
 import imaginationfarm.spirit.creature.Creature;
 

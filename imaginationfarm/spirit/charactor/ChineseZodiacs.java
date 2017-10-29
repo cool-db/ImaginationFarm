@@ -1,24 +1,25 @@
 package imaginationfarm.spirit.charactor;
 
-import imaginationfarm.spirit.creature.Animal.*;
+import imaginationfarm.spirit.creature.animal.*;
+import imaginationfarm.spirit.creature.animal.chineseZodiac.ChineseZodiac;
 
 import java.util.*;
 
 //单利模式
-public enum ChineseZodiac {
+public enum ChineseZodiacs {
     INSTANCE;
     String chineseZodiacList[] = {"rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "goat", "monkey", "rooster", "dog", "pig"};
     AnimalFactory animalFactory = new AnimalFactory();
-    Map<String, Animal> chineseZodiacs = new HashMap<>();
+    Map<String, ChineseZodiac> chineseZodiacs = new HashMap<>();
 
-    ChineseZodiac() {
+    ChineseZodiacs() {
         for (String chineseZodiac :
                 chineseZodiacList) {
-            chineseZodiacs.put(chineseZodiac, animalFactory.getAnimal(chineseZodiac));
+            chineseZodiacs.put(chineseZodiac, (ChineseZodiac)animalFactory.getAnimal(chineseZodiac));
         }
     }
 
-    public Animal getAnimal(String name) {
+    public ChineseZodiac getChineseZodiac(String name) {
         return chineseZodiacs.get(name.toLowerCase());
     }
 }

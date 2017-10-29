@@ -1,8 +1,9 @@
-package imaginationfarm.spirit.creature.Animal;
+package imaginationfarm.spirit.creature.animal;
 
 import imaginationfarm.spirit.creature.Creature;
 import imaginationfarm.spirit.creature.CreatureFactory;
-import imaginationfarm.spirit.creature.Crop.Crop;
+import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
+import imaginationfarm.spirit.creature.crop.Crop;
 
 //工厂模式
 public class AnimalFactory extends CreatureFactory {

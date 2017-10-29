@@ -1,9 +1,10 @@
-import imaginationfarm.spirit.charactor.ChineseZodiac;
-import imaginationfarm.spirit.creature.Animal.AnimalFactory;
+import imaginationfarm.spirit.charactor.ChineseZodiacs;
+import imaginationfarm.spirit.creature.animal.AnimalFactory;
 import imaginationfarm.spirit.creature.CreatureFactory;
 import imaginationfarm.spirit.creature.FactoryProducer;
 import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.MealBuilder;
+import org.testng.Assert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

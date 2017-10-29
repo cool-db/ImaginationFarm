@@ -1,4 +1,4 @@
-package imaginationfarm.spirit.creature.Crop;
+package imaginationfarm.spirit.creature.crop;
 
 import imaginationfarm.spirit.creature.Creature;
 

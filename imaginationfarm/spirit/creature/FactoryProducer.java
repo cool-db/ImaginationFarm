@@ -1,7 +1,7 @@
 package imaginationfarm.spirit.creature;
 
-import imaginationfarm.spirit.creature.Animal.AnimalFactory;
-import imaginationfarm.spirit.creature.Crop.CropFactory;
+import imaginationfarm.spirit.creature.animal.AnimalFactory;
+import imaginationfarm.spirit.creature.crop.CropFactory;
 
 //抽象工厂模式
 public class FactoryProducer {
