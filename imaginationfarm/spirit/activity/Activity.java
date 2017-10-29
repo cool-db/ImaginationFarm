@@ -1,3 +1,5 @@
+package imaginationfarm.spirit.activity;
+
 public abstract class Activity {
     abstract void startPlay();
     abstract void endPlay();
