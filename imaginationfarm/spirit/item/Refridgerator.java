@@ -6,20 +6,17 @@ import java.util.List;
 // 备忘录模式
 
 public class Refridgerator {
-    private List<Crisper> crisperList = new ArrayList<Crisper>();
+    private List<Crisper> crisperList = new ArrayList<>();
 
-    public void addCrisper(Crisper crisper){
+    public void addCrisper(Crisper crisper) {
         crisperList.add(crisper);
     }
 
-    public Crisper getCrisper(int index){
+    public Crisper getCrisper(int index) {
         return crisperList.get(index);
     }
 
     public void clear() {
         crisperList.clear();
     }
-
-
-
 }
