@@ -35,7 +35,7 @@ public class AbstractFactoryDemo {
 
         System.out.println("------------------Product Meat------------------");
         System.out.println("CowFactory, SheepFactory and PigFactory are producing meat: ");
-        Beaf b = new Beaf("beaf");
+        Beef b = new Beaf("beef");
         Lamb l = new Lamb("lamb");
         Pork p = new Pork("pork");
         b.use();
