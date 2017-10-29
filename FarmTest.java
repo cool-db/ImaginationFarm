@@ -1,10 +1,10 @@
-import imaginationfarm.abst.logger.logAdapter.CommonLogAdapter;
 import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
+import imaginationfarm.spirit.activity.Activity;
+import imaginationfarm.spirit.activity.Party;
+import imaginationfarm.spirit.charactor.Farmer;
+import imaginationfarm.spirit.creature.animal.chineseZodiac.Dog;
 import imaginationfarm.spirit.item.*;
-import imaginationfarm.spirit.breed.Duck;
-import imaginationfarm.spirit.breed.Fowl;
-import imaginationfarm.spirit.breed.Poultry;
 import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.MealBuilder;
 import imaginationfarm.story.bakeCake.BakeCake;
@@ -52,8 +52,14 @@ public class FarmTest {
     }
 
     @Test
-    public static void TestBreed() {
-        Fowl duck = new Poultry("amy","ceo", 10, 30, new Duck());
-        duck.breed();
+    public static void TestBreed(){
+        Farmer farmer=new Farmer();
+        farmer.breedAnimal(new Dog());
+    }
+
+    @Test
+    public static void TestActivity(){
+        Activity activity = new Party();
+        activity.play();
     }
 }
