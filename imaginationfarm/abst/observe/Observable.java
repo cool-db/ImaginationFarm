@@ -22,7 +22,7 @@ public class Observable {
         }
     }
 
-    public synchronized void notifyObservers(Object arg) {
+    public synchronized void notify(Object arg) {
         for (Observer sub : subs) {
             sub.update(this, arg);
         }

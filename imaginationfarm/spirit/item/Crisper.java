@@ -13,7 +13,7 @@ public class Crisper {
         this.meal = meal;
     }
 
-    public void addItem(Item item){
+    public void addItem(Item item) {
         meal.addItem(item);
     }
 

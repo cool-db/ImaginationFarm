@@ -107,10 +107,10 @@ public class DesignPatternTest {
         goat.wakeUp();
         ox.wakeUp();
         rat.wakeUp();
-        dog.addNextNotifier(goat);
-        goat.addNextNotifier(ox);
-        goat.addNextNotifier(rat);
-        dog.notify("hello");
+        dog.getCr().addNextNotifier(goat);
+        goat.getCr().addNextNotifier(ox);
+        goat.getCr().addNextNotifier(rat);
+        dog.getCr().notified("hello");
         System.out.println("end");
     }
 

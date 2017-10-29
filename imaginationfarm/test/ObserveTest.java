@@ -26,7 +26,7 @@ class Subject extends Observable {
             this.data = data;
         }
 
-        notifyObservers(" test");
+        notify(" test");
     }
 }
 
