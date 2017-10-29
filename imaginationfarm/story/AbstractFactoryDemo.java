@@ -1,6 +1,6 @@
 package imaginationfarm.story;
 
-import imaginationfarm.spirit.AbstProducts.*;
+import imaginationfarm.spirit.abstProducts.*;
 
 public class AbstractFactoryDemo {
 

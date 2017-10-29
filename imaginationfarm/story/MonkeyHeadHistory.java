@@ -1,6 +1,6 @@
 package imaginationfarm.story;
-import imaginationfarm.spirit.MomentoHairSpirit.MonkeyHead;
-import imaginationfarm.spirit.MomentoHairSpirit.cleverHair;
+import imaginationfarm.spirit.momentoHairSpirit.MonkeyHead;
+import imaginationfarm.spirit.momentoHairSpirit.cleverHair;
 
 public class MonkeyHeadHistory {
     public void history(){

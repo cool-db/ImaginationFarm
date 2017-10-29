@@ -1,11 +1,9 @@
 package imaginationfarm.story;
 
-import imaginationfarm.spirit.AbstProducts.Chicken;
-import imaginationfarm.spirit.StrategySpirit.ChickenWork;
-import imaginationfarm.spirit.StrategySpirit.CowWork;
-import imaginationfarm.spirit.StrategySpirit.MouseWork;
-import imaginationfarm.spirit.StrategySpirit.PigGirlWork;
-import org.omg.CORBA.PUBLIC_MEMBER;
+import imaginationfarm.spirit.strategySpirit.ChickenWork;
+import imaginationfarm.spirit.strategySpirit.CowWork;
+import imaginationfarm.spirit.strategySpirit.MouseWork;
+import imaginationfarm.spirit.strategySpirit.PigGirlWork;
 
 public class AnimalJobs {
 

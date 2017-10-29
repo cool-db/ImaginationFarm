@@ -1,8 +1,8 @@
 package imaginationfarm.spirit.IterSpirits;
 
 
-import imaginationfarm.abst.AbstIter.Commander;
-import imaginationfarm.abst.AbstIter.Team;
+import imaginationfarm.abst.abstIter.Commander;
+import imaginationfarm.abst.abstIter.Team;
 
 import java.util.ArrayList;
 
