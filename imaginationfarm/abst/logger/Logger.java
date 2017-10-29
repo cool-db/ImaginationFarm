@@ -1,5 +1,10 @@
 package imaginationfarm.abst.logger;
 
+import imaginationfarm.abst.logger.logFilter.AssertLogFilter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * But more pretty, simple and powerful
  */
@@ -11,12 +16,23 @@ public final class Logger {
     public static final int WARN = 5;
     public static final int ERROR = 6;
     public static final int ASSERT = 7;
+    public static boolean isBuffer = false;
+
+    public static boolean isVERBOSE = true;
+    public static boolean isDEBUG = true;
+    public static boolean isINFO = true;
+    public static boolean isWARN = true;
+    public static boolean isERROR = true;
+    public static boolean isASSERT = true;
+
+    public static List<LogInfo> buffer = new ArrayList<>();
 
     private static Printer printer = new LoggerPrinter();
 
     private Logger() {
         //no instance
     }
+
     public static String getLogLevel(int priority) {
         switch (priority) {
             case 2:
@@ -34,7 +50,7 @@ public final class Logger {
         }
         return null;
     }
-    
+
     public static void printer(Printer printer) {
         Logger.printer = printer;
     }
@@ -52,7 +68,43 @@ public final class Logger {
     }
 
     public static void log(int priority, String tag, String message, Throwable throwable) {
+        if (isBuffer) {
+            buffer.add(new LogInfo(priority, tag, message, throwable));
+        }
         printer.log(priority, tag, message, throwable);
+    }
+
+    public static void setLogType(boolean isVERBOSE, boolean isDEBUG, boolean isINFO, boolean isWARN, boolean isERROR, boolean isASSERT) {
+        Logger.isVERBOSE = isVERBOSE;
+        Logger.isDEBUG = isDEBUG;
+        Logger.isINFO = isINFO;
+        Logger.isWARN = isWARN;
+        Logger.isERROR = isERROR;
+        Logger.isASSERT = isASSERT;
+    }
+
+    public static void enableBuffer(boolean isBuffer) {
+        Logger.isBuffer = isBuffer;
+    }
+
+    public static void sync() {
+        if (!isVERBOSE)
+            buffer = (new AssertLogFilter()).meetLogFilter(buffer);
+        if (!isDEBUG)
+            buffer = (new AssertLogFilter()).meetLogFilter(buffer);
+        if (!isINFO)
+            buffer = (new AssertLogFilter()).meetLogFilter(buffer);
+        if (!isWARN)
+            buffer = (new AssertLogFilter()).meetLogFilter(buffer);
+        if (!isERROR)
+            buffer = (new AssertLogFilter()).meetLogFilter(buffer);
+        if (!isASSERT)
+            buffer = (new AssertLogFilter()).meetLogFilter(buffer);
+        for (LogInfo info :
+                buffer) {
+            printer.log(info.priority, info.tag, info.message, info.throwable);
+            buffer.remove(info);
+        }
     }
 
     public static void d(String message, Object... args) {

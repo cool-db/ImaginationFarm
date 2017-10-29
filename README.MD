@@ -56,7 +56,10 @@ todo 日志系统，loglevel
 *这些设计模式特别关注对象之间的通信。*
 - [ ] 责任链模式（Chain of Responsibility Pattern）
 - [ ] 命令模式（Command Pattern）
-- [ ] 解释器模式（Interpreter Pattern）
+- [x] 解释器模式（Interpreter Pattern）
+```
+日志系统，loglevel转换到输出
+```
 - [x] 迭代器模式（Iterator Pattern）
 ```
 十二生肖的名单列表
