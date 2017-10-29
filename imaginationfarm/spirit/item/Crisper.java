@@ -1,23 +1,23 @@
 package imaginationfarm.spirit.item;
 
+import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.Item;
-import java.util.ArrayList;
-import java.util.List;
+
 
 // 备忘录模式
 
 public class Crisper {
-    private List<Item> items = new ArrayList<Item>();
+    private Meal meal = new Meal();
 
-    public Crisper(List<Item> items) {
-        this.items = items;
+    public Crisper(Meal meal) {
+        this.meal = meal;
     }
 
     public void addItem(Item item){
-        items.add(item);
+        meal.addItem(item);
     }
 
-    public getItems() {
-        return items;
+    public Meal getMeal() {
+        return meal;
     }
 }

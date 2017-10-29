@@ -1,7 +1,10 @@
 import imaginationfarm.spirit.charactor.ChineseZodiacs;
+import imaginationfarm.spirit.charactor.SuperVisor;
 import imaginationfarm.spirit.creature.animal.AnimalFactory;
 import imaginationfarm.spirit.creature.CreatureFactory;
 import imaginationfarm.spirit.creature.FactoryProducer;
+import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
+import imaginationfarm.story.action.ChargeAction;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -73,16 +76,46 @@ public class DesignPatternTest {
 
     @Test
     public void Proxy() {
-
+        AnimalFactory animalFactory = new AnimalFactory();
+        SuperVisor superVisor = new SuperVisor("father");
+        superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
+        superVisor.wakeUp();
     }
 
     @Test
     public void ChainofResponsibility() {
+        Dog dog = new Dog();
+        Goat goat = new Goat();
+        Ox ox = new Ox();
+        Rat rat = new Rat();
 
+        dog.wakeUp();
+        goat.wakeUp();
+        ox.wakeUp();
+        rat.wakeUp();
+        dog.addNextNotifier(goat);
+        goat.addNextNotifier(ox);
+        goat.addNextNotifier(rat);
+        dog.notify("hello");
+        System.out.println("end");
     }
 
     @Test
     public void Command() {
+
+        Dog dog = new Dog();
+        Goat goat = new Goat();
+        Ox ox = new Ox();
+        Rat rat = new Rat();
+
+        dog.wakeUp();
+        goat.wakeUp();
+        ox.wakeUp();
+        rat.wakeUp();
+
+        ChargeAction chargeAction = new ChargeAction(goat, "bad");
+        dog.takeOrder(chargeAction);
+        dog.placeOrders();
 
     }
 

@@ -24,5 +24,5 @@ public class Meal {
          System.out.print(", Packing : "+item.packing().pack());
          System.out.println(", Price : "+item.price());
       }     
-   }  
+   }
 }

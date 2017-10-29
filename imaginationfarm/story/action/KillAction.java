@@ -7,7 +7,7 @@ public class KillAction implements Action {
     KillAction(ChineseZodiac aim) {
         this.aim = aim;
     }
-    public excute() {
+    public void excute() {
         aim.die();
         System.out.println(aim.getClass().getName() + " is killed.");
     }

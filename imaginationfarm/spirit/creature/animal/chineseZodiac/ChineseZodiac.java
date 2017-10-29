@@ -1,8 +1,8 @@
 package imaginationfarm.spirit.creature.animal.chineseZodiac;
 
 import imaginationfarm.spirit.creature.animal.Animal;
-import imaginationfarm.abst.state;
-import imaginationfarm.story.action;
+import imaginationfarm.abst.state.*;
+import imaginationfarm.story.action.*;
 import java.util.ArrayList;
 
 public class ChineseZodiac implements Animal {
@@ -27,19 +27,22 @@ public class ChineseZodiac implements Animal {
     }
 
     public void notify(String notification){
+        if (!state.isAwake()) return;
+
         // Get Notified
         notified(notification);
 
         // Notify My Next Notifier
-        if (!nextLogger.isEmpty()){
+        if (!nextNotifier.isEmpty()){
             for (ChineseZodiac notifier: nextNotifier) {
-                notifier.notify();
+                notifier.notify(notification);
             }
         }
     }
 
     public void notified(String notification) {
-        System.out.println(this.getClass().getName() + " get notification: " + notification);
+        if (!state.isAwake()) return;
+        System.out.println("get notification: " + notification);
     }
 
     // 状态模式
@@ -61,12 +64,14 @@ public class ChineseZodiac implements Animal {
 
     // 命令模式
     public void takeOrder(Action order){
+        if (!state.isAwake()) return;
         actionList.add(order);
     }
 
     public void placeOrders(){
+        if (!state.isAwake()) return;
         for (Action order : actionList) {
-            order.execute();
+            order.excute();
         }
         actionList.clear();
     }

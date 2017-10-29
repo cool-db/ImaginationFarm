@@ -8,7 +8,7 @@ public class SuperVisor extends ChineseZodiac{
     private ChineseZodiac realAnimal;
     public String name = "";
 
-    SuperVisor(String name) {
+    public SuperVisor(String name) {
         this.name = name;
     }
 
@@ -28,5 +28,9 @@ public class SuperVisor extends ChineseZodiac{
         if(this.realAnimal != null){
             realAnimal = null;
         }
+    }
+
+    public ChineseZodiac getSuperVisor() {
+        return realAnimal;
     }
 }

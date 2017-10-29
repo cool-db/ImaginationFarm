@@ -1,5 +1,8 @@
 package imaginationfarm.spirit.item;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // 备忘录模式
 
 public class Refridgerator {
