@@ -1,7 +1,8 @@
+package imaginationfarm.spirit.breed;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fowl extends Animal {
+public class Fowl extends FarmAnimal {
     private String name;
     private String position;
     private int age;
@@ -18,7 +19,7 @@ public class Fowl extends Animal {
     }
 
     public void breed() {
-        breedAPI.breedFowl(age, fodder);
+        breedAPI.breedFowl(name, position, age, fodder);
     }
 
     public void add(Fowl e) {

@@ -1,3 +1,5 @@
+package imaginationfarm.spirit.plant;
+
 public class Wheat implements Crop {
     private String strain;
     private double surviveRate;

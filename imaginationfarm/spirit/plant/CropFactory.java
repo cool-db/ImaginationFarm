@@ -1,3 +1,4 @@
+package imaginationfarm.spirit.plant;
 import java.util.HashMap;
 
 public class CropFactory {

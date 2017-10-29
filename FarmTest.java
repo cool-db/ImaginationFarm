@@ -1,9 +1,14 @@
 import imaginationfarm.abst.logger.CommonLogAdapter;
 import imaginationfarm.abst.logger.Logger;
+import imaginationfarm.spirit.breed.Duck;
+import imaginationfarm.spirit.breed.FarmAnimal;
+import imaginationfarm.spirit.breed.Fowl;
 import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.MealBuilder;
 import imaginationfarm.story.bakeCake.BakeCake;
 import org.testng.annotations.Test;
+
+import imaginationfarm.spirit.plant.Crop;
 
 public class FarmTest {
 
@@ -37,5 +42,11 @@ public class FarmTest {
     public static void TestBakeCake() {
         BakeCake bCake=new BakeCake();
         bCake.bakeCake();
+    }
+
+    @Test
+    public static void TestBreed() {
+        FarmAnimal duck = new Fowl("amy","ceo", 10, 30, new Duck());
+        duck.breed();
     }
 }
