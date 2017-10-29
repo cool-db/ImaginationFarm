@@ -26,9 +26,9 @@ Logger使用static实现了单例模式
 ```
 早餐 todo rename
 ```
-- [ ] 原型模式（Prototype Pattern）朱安琪
+- [x] 原型模式（Prototype Pattern）
 ```
-todo 下蛋
+蛋糕
 ```
 
 **结构型模式**  
@@ -53,7 +53,10 @@ todo 日志系统，loglevel
 - [ ] 责任链模式（Chain of Responsibility Pattern）
 - [ ] 命令模式（Command Pattern）
 - [ ] 解释器模式（Interpreter Pattern）
-- [x] 迭代器模式（Iterator Pattern）邱宇航
+- [x] 迭代器模式（Iterator Pattern）
+```
+十二生肖的名单列表
+```
 - [ ] 中介者模式（Mediator Pattern）
 - [ ] 备忘录模式（Memento Pattern）
 - [ ] 观察者模式（Observer Pattern）
