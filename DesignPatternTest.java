@@ -93,7 +93,6 @@ public class DesignPatternTest {
         AnimalFactory animalFactory = new AnimalFactory();
         SuperVisor superVisor = new SuperVisor("father");
         superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
-        superVisor.wakeUp();
     }
 
     @Test

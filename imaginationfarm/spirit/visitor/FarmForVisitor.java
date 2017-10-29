@@ -1,18 +1,31 @@
 package imaginationfarm.spirit.visitor;
 
-public class FarmForVisitor implements FarmPart{
-	FarmPart[] parts;
+public class FarmForVisitor implements FarmPart {
+    Dormitory dormitory = new Dormitory();
+	School school = new School();
+	Canteen canteen = new Canteen();
+	Playground playground = new Playground();
 
-	   public FarmForVisitor(){
-	      parts = new FarmPart[] {new Dormitory(), new School(), new Canteen(), new Playground()};        
-	   } 
+    public FarmForVisitor() {
+    }
 
+    public Canteen getCanteen() {
+        return canteen;
+    }
 
-	   @Override
-	   public void accept(FarmPartVisitor farmPartVisitor) {
-	      for (int i = 0; i < parts.length; i++) {
-	         parts[i].accept(farmPartVisitor);
-	      }
-	      farmPartVisitor.visit(this);
-	   }
+    public Dormitory getDormitory() {
+        return dormitory;
+    }
+
+    public Playground getPlayground() {
+        return playground;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    @Override
+    public void accept(FarmPartVisitor farmPartVisitor) {
+    }
 }
