@@ -39,12 +39,12 @@ Logger使用static实现了单例模式
 日志系统，适配不同的log模式
 ```
 - [ ] 桥接模式（Bridge Pattern）
-- [ ] 过滤器模式（Filter、Criteria Pattern）邱宇航  
+- [x] 过滤器模式（Filter、Criteria Pattern）
 ```
-todo 日志系统，loglevel
+日志系统，loglevel
 ```
 - [ ] 组合模式（Composite Pattern）
-- [ ] 装饰器模式（Decorator Pattern）邱宇航  
+- [ ] 装饰器模式（Decorator Pattern）
 - [x] 外观模式（Facade Pattern
 ```
 日志系统，分别包装了FormatStrategy,LogAdapter,LogStrategy
