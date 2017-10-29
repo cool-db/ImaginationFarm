@@ -20,7 +20,7 @@ import javax.xml.transform.stream.StreamSource;
 import static imaginationfarm.abst.logger.Logger.*;
 
 
-class LoggerPrinter implements Printer {
+public class LoggerPrinter implements Printer {
 
   private static final int JSON_INDENT = 2;
 

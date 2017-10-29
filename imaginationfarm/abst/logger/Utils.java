@@ -7,17 +7,17 @@ import java.util.Arrays;
 
 import static imaginationfarm.abst.logger.Logger.*;
 
-final class Utils {
+public final class Utils {
 
     private Utils() {
         // Hidden constructor.
     }
 
-    static boolean isEmpty(CharSequence str) {
+    public static boolean isEmpty(CharSequence str) {
         return str == null || str.length() == 0;
     }
 
-    static boolean equals(CharSequence a, CharSequence b) {
+    public static boolean equals(CharSequence a, CharSequence b) {
         if (a == b) return true;
         if (a != null && b != null) {
             int length = a.length();
@@ -35,7 +35,7 @@ final class Utils {
         return false;
     }
 
-    static String getStackTraceString(Throwable tr) {
+    public static String getStackTraceString(Throwable tr) {
         if (tr == null) {
             return "";
         }
@@ -55,7 +55,7 @@ final class Utils {
         return sw.toString();
     }
 
-    static String logLevel(int value) {
+    public static String logLevel(int value) {
         switch (value) {
             case VERBOSE:
                 return "VERBOSE";

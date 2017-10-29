@@ -1,4 +1,8 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.formatStrategy;
+
+import imaginationfarm.abst.logger.*;
+import imaginationfarm.abst.logger.logStrategy.LogStrategyMaker;
+import imaginationfarm.abst.logger.logStrategy.PrintLogStrategy;
 
 public class PrettyFormatStrategy implements FormatStrategy {
 
@@ -182,7 +186,7 @@ public class PrettyFormatStrategy implements FormatStrategy {
 
         public PrettyFormatStrategy build() {
             if (logStrategy == null) {
-                logStrategy = new PrintLogStrategy();
+                logStrategy = LogStrategyMaker.getCommonFormatStrategy();
             }
             return new PrettyFormatStrategy(this);
         }

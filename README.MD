@@ -44,7 +44,10 @@ todo 日志系统，loglevel
 ```
 - [ ] 组合模式（Composite Pattern）
 - [ ] 装饰器模式（Decorator Pattern）邱宇航  
-- [ ] 外观模式（Facade Pattern）邱宇航  
+- [x] 外观模式（Facade Pattern
+```
+日志系统，分别包装了FormatStrategy,LogAdapter,LogStrategy
+```
 - [ ] 享元模式（Flyweight Pattern）
 - [ ] 代理模式（Proxy Pattern）
 

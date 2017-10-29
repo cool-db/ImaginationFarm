@@ -1,10 +1,6 @@
-import imaginationfarm.abst.logger.CommonFormatStrategy;
-import imaginationfarm.abst.logger.CommonLogAdapter;
+import imaginationfarm.abst.logger.logAdapter.CommonLogAdapter;
 import imaginationfarm.abst.logger.Logger;
-import imaginationfarm.abst.logger.PrintLogStrategy;
-import imaginationfarm.spirit.creature.Animal.AnimalFactory;
-import imaginationfarm.spirit.creature.CreatureFactory;
-import imaginationfarm.spirit.creature.FactoryProducer;
+import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
 import imaginationfarm.spirit.item.breakfirst.Meal;
 import imaginationfarm.spirit.item.breakfirst.MealBuilder;
 import org.testng.annotations.Test;
@@ -13,7 +9,7 @@ public class FarmTest {
 
     @Test
     public void Logger() {
-        Logger.addLogAdapter(new CommonLogAdapter());
+        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
         Logger.d("debug");
         Logger.e("error");
         Logger.w("warning");

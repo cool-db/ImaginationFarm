@@ -1,4 +1,6 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.formatStrategy;
+
+import imaginationfarm.abst.logger.FormatStrategy;
 
 public class CommonFormatStrategy implements FormatStrategy {
 

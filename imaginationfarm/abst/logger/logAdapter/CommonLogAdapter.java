@@ -1,11 +1,16 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.logAdapter;
+
+import imaginationfarm.abst.logger.FormatStrategy;
+import imaginationfarm.abst.logger.LogAdapter;
+import imaginationfarm.abst.logger.formatStrategy.FormatStrategyMaker;
+import imaginationfarm.abst.logger.formatStrategy.PrettyFormatStrategy;
 
 public class CommonLogAdapter implements LogAdapter {
 
     private final FormatStrategy formatStrategy;
 
     public CommonLogAdapter() {
-        this.formatStrategy = PrettyFormatStrategy.newBuilder().build();
+        this.formatStrategy = FormatStrategyMaker.getPrettyFormatStrategy();
     }
 
     public CommonLogAdapter(FormatStrategy formatStrategy) {

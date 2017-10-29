@@ -1,5 +1,7 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.logStrategy;
 
+
+import imaginationfarm.abst.logger.LogStrategy;
 
 public class PrintLogStrategy implements LogStrategy {
 

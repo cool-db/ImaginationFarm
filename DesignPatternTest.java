@@ -1,6 +1,3 @@
-import imaginationfarm.abst.logger.CommonFormatStrategy;
-import imaginationfarm.abst.logger.CommonLogAdapter;
-import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.spirit.creature.Animal.AnimalFactory;
 import imaginationfarm.spirit.creature.CreatureFactory;
 import imaginationfarm.spirit.creature.FactoryProducer;
