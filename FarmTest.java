@@ -1,4 +1,3 @@
-import imaginationfarm.abst.logger.CommonLogAdapter;
 import imaginationfarm.abst.logger.logAdapter.CommonLogAdapter;
 import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
@@ -27,17 +26,17 @@ public class FarmTest {
         Meal vegMeal = mealBuilder.prepareVegMeal();
         System.out.println("Veg Meal");
         vegMeal.showItems();
-        System.out.println("Total Cost: " +vegMeal.getCost());
+        System.out.println("Total Cost: " + vegMeal.getCost());
 
         Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
         System.out.println("\n\nNon-Veg Meal");
         nonVegMeal.showItems();
-        System.out.println("Total Cost: " +nonVegMeal.getCost());
+        System.out.println("Total Cost: " + nonVegMeal.getCost());
     }
 
     @Test
     public static void TestBakeCake() {
-        BakeCake bCake=new BakeCake();
+        BakeCake bCake = new BakeCake();
         bCake.bakeCake();
     }
 }
