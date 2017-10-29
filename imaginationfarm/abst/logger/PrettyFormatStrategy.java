@@ -41,7 +41,6 @@ public class PrettyFormatStrategy implements FormatStrategy {
         logTopBorder(priority, tag);
         logHeaderContent(priority, tag, methodCount);
 
-        //get bytes of message with system's default charset (which is UTF-8 for Android)
         byte[] bytes = message.getBytes();
         int length = bytes.length;
         if (length <= CHUNK_SIZE) {
@@ -57,7 +56,6 @@ public class PrettyFormatStrategy implements FormatStrategy {
         }
         for (int i = 0; i < length; i += CHUNK_SIZE) {
             int count = Math.min(length - i, CHUNK_SIZE);
-            //create a new String with system's default charset (which is UTF-8 for Android)
             logContent(priority, tag, new String(bytes, i, count));
         }
         logBottomBorder(priority, tag);
@@ -78,7 +76,6 @@ public class PrettyFormatStrategy implements FormatStrategy {
 
         int stackOffset = getStackOffset(trace) + methodOffset;
 
-        //corresponding method count with the current stack may exceeds the stack trace. Trims the count
         if (methodCount + stackOffset > trace.length) {
             methodCount = trace.length - stackOffset - 1;
         }

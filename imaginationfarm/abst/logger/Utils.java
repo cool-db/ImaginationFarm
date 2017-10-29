@@ -40,8 +40,6 @@ final class Utils {
             return "";
         }
 
-        // This is to reduce the amount of log spew that apps do in the non-error
-        // condition of the network being unavailable.
         Throwable t = tr;
         while (t != null) {
             if (t instanceof UnknownHostException) {
