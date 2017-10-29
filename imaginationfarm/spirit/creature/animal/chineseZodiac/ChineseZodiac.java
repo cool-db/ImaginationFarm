@@ -3,6 +3,7 @@ package imaginationfarm.spirit.creature.animal.chineseZodiac;
 import imaginationfarm.spirit.creature.animal.Animal;
 import imaginationfarm.abst.state.*;
 import imaginationfarm.story.action.*;
+
 import java.util.ArrayList;
 
 public class ChineseZodiac implements Animal {
@@ -26,15 +27,15 @@ public class ChineseZodiac implements Animal {
         this.nextNotifier.clear();
     }
 
-    public void notify(String notification){
+    public void notify(String notification) {
         if (!state.isAwake()) return;
 
         // Get Notified
         notified(notification);
 
         // Notify My Next Notifier
-        if (!nextNotifier.isEmpty()){
-            for (ChineseZodiac notifier: nextNotifier) {
+        if (!nextNotifier.isEmpty()) {
+            for (ChineseZodiac notifier : nextNotifier) {
                 notifier.notify(notification);
             }
         }
@@ -63,16 +64,21 @@ public class ChineseZodiac implements Animal {
     }
 
     // 命令模式
-    public void takeOrder(Action order){
+    public void takeOrder(Action order) {
         if (!state.isAwake()) return;
         actionList.add(order);
     }
 
-    public void placeOrders(){
+    public void placeOrders() {
         if (!state.isAwake()) return;
         for (Action order : actionList) {
             order.excute();
         }
         actionList.clear();
     }
+
+    public void reactToState() {
+        System.out.println("Find the hair is stolen.");
+    }
+
 }

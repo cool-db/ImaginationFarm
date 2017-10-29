@@ -1,5 +1,5 @@
 package imaginationfarm.story.discoverHairStolen;
-import imaginationfarm.spirit.charactor.hair;
+import imaginationfarm.spirit.charactor.Hair;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
 
 public class DiscoverHairStolen {
