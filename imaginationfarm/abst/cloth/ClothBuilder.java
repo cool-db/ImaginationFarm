@@ -1,4 +1,4 @@
-package ClothMatching;
+package imaginationfarm.abst.cloth;
 
 abstract public class ClothBuilder {
 

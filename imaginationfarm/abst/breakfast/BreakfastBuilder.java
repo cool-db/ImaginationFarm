@@ -1,4 +1,4 @@
-package Breakfast;
+package imaginationfarm.abst.breakfast;
 
 abstract public class BreakfastBuilder {
     protected Breakfast breakfast;

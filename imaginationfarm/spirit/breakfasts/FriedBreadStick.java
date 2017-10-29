@@ -1,7 +1,9 @@
-package Breakfast;
+package imaginationfarm.spirit.breakfasts;
+
+import imaginationfarm.abst.breakfast.BreakfastBuilder;
 
 public class FriedBreadStick extends BreakfastBuilder {
-    FriedBreadStick() {System.out.println("Breakfast: Fried bread stick and soy milk are ready.");}
+    public FriedBreadStick() {System.out.println("Breakfast: Fried bread stick and soy milk are ready.");}
     @Override
     public void buildStapleFood() {
         breakfast.setStapleFood("Fried Bread Stick");

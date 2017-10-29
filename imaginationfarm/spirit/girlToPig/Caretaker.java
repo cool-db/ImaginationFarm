@@ -1,9 +1,9 @@
-package GirlTurnToPig;
+package imaginationfarm.spirit.girlToPig;
 
 //encapsulate momentos
 public class Caretaker {
 
-    Caretaker() {System.out.println("Caretaker is created.");}
+    public Caretaker() {System.out.println("Caretaker is created.");}
 
     private Momento momento;
 

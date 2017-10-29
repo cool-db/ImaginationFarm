@@ -1,4 +1,7 @@
-package ClothMatching;
+package imaginationfarm.spirit.cloths;
+
+import imaginationfarm.abst.cloth.Cloth;
+import imaginationfarm.abst.cloth.ClothBuilder;
 
 //单例模式衣柜，即builder中的director
 public class Wardrobe {

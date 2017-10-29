@@ -1,4 +1,4 @@
-package GirlTurnToPig;
+package imaginationfarm.spirit.girlToPig;
 
 //originator
 public class GirlState {

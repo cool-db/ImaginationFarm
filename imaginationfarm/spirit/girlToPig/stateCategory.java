@@ -1,4 +1,4 @@
-package GirlTurnToPig;
+package imaginationfarm.spirit.girlToPig;
 
 public enum stateCategory {
 

@@ -1,4 +1,4 @@
-package SnakeConfessing;
+package imaginationfarm.spirit.snake;
 
 public class Chicken {
     private Chicken() {System.out.println("Chicken appears.");}

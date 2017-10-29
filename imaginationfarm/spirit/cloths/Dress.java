@@ -1,4 +1,6 @@
-package ClothMatching;
+package imaginationfarm.spirit.cloths;
+
+import imaginationfarm.abst.cloth.ClothBuilder;
 
 public class Dress extends ClothBuilder {
 

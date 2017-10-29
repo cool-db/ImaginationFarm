@@ -1,4 +1,7 @@
-package SnakeConfessing;
+package imaginationfarm.spirit.snake;
+
+import imaginationfarm.abst.snake.Context;
+import imaginationfarm.abst.snake.State;
 
 public class KindState implements State {
     private static KindState kindState = new KindState();

@@ -1,4 +1,7 @@
-package Breakfast;
+package imaginationfarm.spirit.breakfasts;
+
+import imaginationfarm.abst.breakfast.Breakfast;
+import imaginationfarm.abst.breakfast.BreakfastBuilder;
 
 //单例模式厨房，即builder中的director
 public class Kitchen {

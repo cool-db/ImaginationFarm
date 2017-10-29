@@ -1,6 +1,7 @@
-package ClothMatching;
+package imaginationfarm.spirit.cloths;
 
-import ClothMatching.ClothBuilder;
+
+import imaginationfarm.abst.cloth.ClothBuilder;
 
 public class Nightwear extends ClothBuilder {
 

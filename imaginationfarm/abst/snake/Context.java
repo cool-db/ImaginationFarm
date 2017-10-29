@@ -1,4 +1,4 @@
-package SnakeConfessing;
+package imaginationfarm.abst.snake;
 
 //管理状态切换
 public interface Context {

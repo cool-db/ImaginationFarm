@@ -1,7 +1,9 @@
-package Breakfast;
+package imaginationfarm.spirit.breakfasts;
+
+import imaginationfarm.abst.breakfast.BreakfastBuilder;
 
 public class BreadAndMilk extends BreakfastBuilder {
-    BreadAndMilk() {System.out.println("Breakfast: Bread and milk are ready.");}
+    public BreadAndMilk() {System.out.println("Breakfast: Bread and milk are ready.");}
 
     @Override
     public void buildSoup() {

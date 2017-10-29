@@ -1,4 +1,4 @@
-package ClothMatching;
+package imaginationfarm.abst.cloth;
 
 public class Cloth {
     private String theUpperPart, theLowerPart, shoes;

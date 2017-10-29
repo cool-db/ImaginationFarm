@@ -1,4 +1,7 @@
-package SnakeConfessing;
+package imaginationfarm.spirit.snake;
+
+import imaginationfarm.abst.snake.Context;
+import imaginationfarm.abst.snake.State;
 
 public class EvilState implements State {
     private static EvilState evilState = new EvilState();

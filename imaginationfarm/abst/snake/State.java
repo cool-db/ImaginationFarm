@@ -1,4 +1,4 @@
-package SnakeConfessing;
+package imaginationfarm.abst.snake;
 
 //处理当前状态
 abstract public interface State {

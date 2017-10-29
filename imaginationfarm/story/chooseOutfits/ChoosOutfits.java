@@ -1,4 +1,7 @@
-package ClothMatching;
+package imaginationfarm.story.chooseOutfits;
+
+import imaginationfarm.abst.cloth.ClothBuilder;
+import imaginationfarm.spirit.cloths.*;
 
 public class ChoosOutfits {
     public static void chooseOutfits() {

@@ -1,7 +1,9 @@
-package Breakfast;
+package imaginationfarm.spirit.breakfasts;
+
+import imaginationfarm.abst.breakfast.BreakfastBuilder;
 
 public class Noodles extends BreakfastBuilder {
-    Noodles() {System.out.println("Noodle and chicken soup are ready.");}
+    public Noodles() {System.out.println("Noodle and chicken soup are ready.");}
     @Override
     public void buildStapleFood() {
         breakfast.setStapleFood("Noodles");

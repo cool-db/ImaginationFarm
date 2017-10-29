@@ -1,4 +1,4 @@
-package Breakfast;
+package imaginationfarm.abst.breakfast;
 
 public class Breakfast {
     private String soup, stapleFood;

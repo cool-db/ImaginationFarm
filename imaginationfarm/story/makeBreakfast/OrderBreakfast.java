@@ -1,4 +1,7 @@
-package Breakfast;
+package imaginationfarm.story.makeBreakfast;
+
+import imaginationfarm.abst.breakfast.BreakfastBuilder;
+import imaginationfarm.spirit.breakfasts.*;
 
 public class OrderBreakfast {
     public static void orderBreakfast() {

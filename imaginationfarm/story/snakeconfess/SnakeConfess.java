@@ -1,4 +1,7 @@
-package SnakeConfessing;
+package imaginationfarm.story.snakeconfess;
+
+import imaginationfarm.spirit.snake.Chicken;
+import imaginationfarm.spirit.snake.Snake;
 
 public class SnakeConfess {
     public static void snakeConfess() {
