@@ -78,8 +78,8 @@ public class FarmTest {
         System.out.println(CEO);
         for (ChineseZodiac headEmployee : CEO.getSubordinates()) {
             System.out.println(headEmployee);
-            for (ChineseZodiac employee : headEmployee.getSubordinates()) {
-                System.out.println(employee);
+            for (ChineseZodiac chineseZodiac : headEmployee.getSubordinates()) {
+                System.out.println(chineseZodiac);
             }
         }
     }
