@@ -4,16 +4,16 @@ import imaginationfarm.abst.logger.FormatStrategy;
 import imaginationfarm.abst.logger.LogAdapter;
 import imaginationfarm.abst.logger.formatStrategy.FormatStrategyMaker;
 import imaginationfarm.abst.logger.formatStrategy.PrettyFormatStrategy;
+import imaginationfarm.abst.logger.logStrategy.LogStrategyMaker;
 
-public class CommonLogAdapter implements LogAdapter {
-
+public class PrettyDiskLogAdapter implements LogAdapter {
     private final FormatStrategy formatStrategy;
 
-    public CommonLogAdapter() {
-        this.formatStrategy = FormatStrategyMaker.getCommonFormatStrategy();
+    public PrettyDiskLogAdapter() {
+        this.formatStrategy = PrettyFormatStrategy.newBuilder().logStrategy(LogStrategyMaker.getDiskFormatStrategy()).build();
     }
 
-    public CommonLogAdapter(FormatStrategy formatStrategy) {
+    public PrettyDiskLogAdapter(FormatStrategy formatStrategy) {
         this.formatStrategy = formatStrategy;
     }
 

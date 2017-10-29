@@ -25,6 +25,7 @@ Logger使用static实现了单例模式
 - [x] 建造者模式（Builder Pattern）
 ```
 早餐 todo rename
+日志系统，PrettyFormatStrategy链式初始化、建造
 ```
 - [x] 原型模式（Prototype Pattern）
 ```

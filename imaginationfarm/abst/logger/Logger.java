@@ -17,7 +17,24 @@ public final class Logger {
     private Logger() {
         //no instance
     }
-
+    public static String getLogLevel(int priority) {
+        switch (priority) {
+            case 2:
+                return "V/";
+            case 3:
+                return "D/";
+            case 4:
+                return "I/";
+            case 5:
+                return "W/";
+            case 6:
+                return "E/";
+            case 7:
+                return "A/";
+        }
+        return null;
+    }
+    
     public static void printer(Printer printer) {
         Logger.printer = printer;
     }
