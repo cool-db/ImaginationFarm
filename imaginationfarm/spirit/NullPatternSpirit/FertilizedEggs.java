@@ -1,6 +1,7 @@
-package NullObjectPattern.NullPatternSpirit;
+package imaginationfarm.spirit.NullPatternSpirit;
 
-import NullObjectPattern.AbstNullPattern.AllEggs;
+
+import imaginationfarm.abst.AbstNullPattern.AllEggs;
 
 public class FertilizedEggs extends AllEggs {
 

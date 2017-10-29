@@ -1,6 +1,7 @@
-package AbstractFactory.AbstProducts;
+package imaginationfarm.spirit.AbstProducts;
 
-import AbstractFactory.AbstFactory.Fur;
+
+import imaginationfarm.abst.AbstFactory.Fur;
 
 public class Woolen extends Fur {
     public Woolen(){};

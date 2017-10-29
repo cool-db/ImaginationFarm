@@ -1,6 +1,7 @@
-package AbstractFactory.AbstProducts;
+package imaginationfarm.spirit.AbstProducts;
 
-import AbstractFactory.AbstFactory.AllMilk;
+
+import imaginationfarm.abst.AbstFactory.AllMilk;
 
 public class GoatMilk extends AllMilk {
     public GoatMilk(){}

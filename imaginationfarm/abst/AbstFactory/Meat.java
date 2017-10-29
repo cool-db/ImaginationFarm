@@ -1,4 +1,4 @@
-package AbstractFactory.AbstFactory;
+package imaginationfarm.abst.AbstFactory;
 
 public class Meat extends AnimalProducts{
     public Meat(){}

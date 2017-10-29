@@ -1,4 +1,4 @@
-package MementoPattern.MomentoHairSpirit;
+package imaginationfarm.spirit.MomentoHairSpirit;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package AbstractFactory.AbstFactory;
+package imaginationfarm.abst.AbstFactory;
 
 public interface Products {
     void create();

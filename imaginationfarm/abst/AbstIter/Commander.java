@@ -1,6 +1,6 @@
-package IteratorPattern.AbstIter;
+package imaginationfarm.abst.AbstIter;
 
-import IteratorPattern.IterSpirits.Animals;
+import imaginationfarm.spirit.IterSpirits.Animals;
 
 public interface Commander {
     Animals next();

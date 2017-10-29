@@ -1,4 +1,4 @@
-package AbstractFactory.AbstFactory;
+package imaginationfarm.abst.AbstFactory;
 
 
 public class AnimalProducts implements Products{

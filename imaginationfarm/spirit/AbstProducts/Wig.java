@@ -1,6 +1,7 @@
-package AbstractFactory.AbstProducts;
+package imaginationfarm.spirit.AbstProducts;
 
-import AbstractFactory.AbstFactory.AnimalProducts;
+
+import imaginationfarm.abst.AbstFactory.AnimalProducts;
 
 public class Wig extends AnimalProducts {
     public Wig(){}

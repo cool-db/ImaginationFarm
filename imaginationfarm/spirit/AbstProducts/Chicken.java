@@ -1,6 +1,7 @@
-package AbstractFactory.AbstProducts;
+package imaginationfarm.spirit.AbstProducts;
 
-import AbstractFactory.AbstFactory.Meat;
+
+import imaginationfarm.abst.AbstFactory.Meat;
 
 public class Chicken extends Meat {
     public Chicken(){}

@@ -1,6 +1,7 @@
-package StrategyPattern.StrategySpirit;
+package imaginationfarm.spirit.StrategySpirit;
 
-import StrategyPattern.AbstStrategy.AnimalsWorking;
+
+import imaginationfarm.abst.AbstStrategy.AnimalsWorking;
 
 public class CowWork implements AnimalsWorking {
     @Override

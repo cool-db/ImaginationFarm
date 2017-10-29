@@ -1,8 +1,8 @@
-package AbstractFactory.AbstProducts;
+package imaginationfarm.spirit.AbstProducts;
 
-import AbstractFactory.AbstFactory.Meat;
+import imaginationfarm.abst.AbstFactory.Meat;
 
-public class Beaf extends Meat {
-    public Beaf(){}
-    public Beaf(String s){super(s);}
+public class Beef extends Meat {
+    public Beef(){}
+    public Beef(String s){super(s);}
 }

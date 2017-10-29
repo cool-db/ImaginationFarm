@@ -1,4 +1,4 @@
-package MementoPattern.MomentoHairSpirit;
+package imaginationfarm.spirit.MomentoHairSpirit;
 
 public class MonkeyHead {
     private String state = "";

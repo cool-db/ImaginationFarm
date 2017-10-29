@@ -1,10 +1,10 @@
-package StrategyPattern;
+package imaginationfarm.story;
 
-import AbstractFactory.AbstProducts.Chicken;
-import StrategyPattern.StrategySpirit.ChickenWork;
-import StrategyPattern.StrategySpirit.CowWork;
-import StrategyPattern.StrategySpirit.MouseWork;
-import StrategyPattern.StrategySpirit.PigGirlWork;
+import imaginationfarm.spirit.AbstProducts.Chicken;
+import imaginationfarm.spirit.StrategySpirit.ChickenWork;
+import imaginationfarm.spirit.StrategySpirit.CowWork;
+import imaginationfarm.spirit.StrategySpirit.MouseWork;
+import imaginationfarm.spirit.StrategySpirit.PigGirlWork;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class AnimalJobs {

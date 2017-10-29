@@ -1,6 +1,6 @@
-package AbstractFactory;
+package imaginationfarm.story;
 
-import AbstractFactory.AbstProducts.*;
+import imaginationfarm.spirit.AbstProducts.*;
 
 public class AbstractFactoryDemo {
 
@@ -35,7 +35,7 @@ public class AbstractFactoryDemo {
 
         System.out.println("------------------Product Meat------------------");
         System.out.println("CowFactory, SheepFactory and PigFactory are producing meat: ");
-        Beef b = new Beaf("beef");
+        Beef b = new Beef("beef");
         Lamb l = new Lamb("lamb");
         Pork p = new Pork("pork");
         b.use();

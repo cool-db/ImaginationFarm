@@ -1,8 +1,8 @@
-package AbstractFactory.AbstProducts;
-import AbstractFactory.AbstFactory.AnimalProducts;
-import NullObjectPattern.AbstNullPattern.AllEggs;
-import NullObjectPattern.NullPatternSpirit.FertilizedEggs;
-import NullObjectPattern.NullPatternSpirit.OtherEggs;
+package imaginationfarm.spirit.AbstProducts;
+import imaginationfarm.abst.AbstFactory.AnimalProducts;
+import imaginationfarm.abst.AbstNullPattern.AllEggs;
+import imaginationfarm.spirit.NullPatternSpirit.FertilizedEggs;
+import imaginationfarm.spirit.NullPatternSpirit.OtherEggs;
 
 public class Eggs extends AnimalProducts {
     private boolean s = false;

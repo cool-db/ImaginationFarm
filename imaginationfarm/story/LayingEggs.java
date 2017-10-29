@@ -1,8 +1,7 @@
-package NullObjectPattern;
+package imaginationfarm.story;
 
-import AbstractFactory.AbstProducts.Eggs;
-import NullObjectPattern.AbstNullPattern.AllEggs;
-import NullObjectPattern.NullPatternSpirit.FertilizedEggs;
+import imaginationfarm.abst.AbstNullPattern.AllEggs;
+import imaginationfarm.spirit.AbstProducts.Eggs;
 
 public class LayingEggs {
     public void layEggs(){

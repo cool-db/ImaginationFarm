@@ -1,4 +1,4 @@
-package IteratorPattern.IterSpirits;
+package imaginationfarm.spirit.IterSpirits;
 
 public class Animals {
     String name = "defalut";
