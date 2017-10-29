@@ -39,8 +39,9 @@ public class AnimalFactory extends CreatureFactory {
                 return new Dog();
             case "pig":
                 return new Pig();
+            default:
+                return new NullAnimal();
         }
-        return null;
     }
 
     @Override
