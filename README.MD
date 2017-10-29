@@ -48,17 +48,32 @@ todo 日志系统，loglevel
 - [ ] 外观模式（Facade Pattern）邱宇航  
 - [ ] 享元模式（Flyweight Pattern）
 - [ ] 代理模式（Proxy Pattern）
+```
+设置supervisor角色
+```
 
 **行为型模式**  
 *这些设计模式特别关注对象之间的通信。*
 - [ ] 责任链模式（Chain of Responsibility Pattern）
+```
+传递通知
+```
 - [ ] 命令模式（Command Pattern）
+```
+分发命令
+```
 - [ ] 解释器模式（Interpreter Pattern）
 - [ ] 迭代器模式（Iterator Pattern）邱宇航
 - [ ] 中介者模式（Mediator Pattern）
 - [ ] 备忘录模式（Memento Pattern）
+```
+冰箱冷藏食品
+```
 - [ ] 观察者模式（Observer Pattern）
 - [ ] 状态模式（State Pattern）
+```
+角色死亡、清醒、睡眠三种状态
+```
 - [ ] 空对象模式（Null Object Pattern）
 - [x] 策略模式（Strategy Pattern）
 ```
