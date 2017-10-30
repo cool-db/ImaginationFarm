@@ -1,3 +1,5 @@
+package imaginationfarm.spirit.activity;
+
 public class Party extends Activity {
 
     @Override
