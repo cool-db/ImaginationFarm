@@ -1,8 +1,5 @@
 package imaginationfarm.spirit.visitor;
 
-import imaginationfarm.abst.printFormat.Printer;
-import imaginationfarm.spirit.charactor.Farmer;
-
 public class FarmVisitor implements FarmPartVisitor {
 
     private String subject;

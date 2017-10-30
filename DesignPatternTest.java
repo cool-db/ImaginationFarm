@@ -90,9 +90,9 @@ public class DesignPatternTest {
 
     @Test
     public void Proxy() {
-        AnimalFactory animalFactory = new AnimalFactory();
-        SuperVisor superVisor = new SuperVisor("father");
-        superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
+//        AnimalFactory animalFactory = new AnimalFactory();
+//        SuperVisor superVisor = new SuperVisor("father");
+//        superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
     }
 
     @Test

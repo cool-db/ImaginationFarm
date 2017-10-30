@@ -58,8 +58,8 @@ public class FarmTest {
 
     @Test
     public static void TestBreed() {
-        Farmer farmer = new Farmer();
-        farmer.breedAnimal(new Dog());
+//        Farmer farmer = new Farmer();
+//        farmer.breedAnimal(new Dog());
     }
 
     @Test

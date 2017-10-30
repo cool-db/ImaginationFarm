@@ -4,8 +4,10 @@ import imaginationfarm.abst.cake.Cake;
 import imaginationfarm.abst.interpret.BinaryExpression;
 import imaginationfarm.abst.interpret.NumberExpression;
 import imaginationfarm.abst.interpret.OpExpressionEnum;
+import imaginationfarm.abst.mediator.ConcreteMediator;
 import imaginationfarm.spirit.activity.*;
 import imaginationfarm.spirit.charactor.Farmer;
+import imaginationfarm.spirit.charactor.SuColleague;
 import imaginationfarm.spirit.charactor.SuperVisor;
 import imaginationfarm.spirit.cloths.Suit;
 import imaginationfarm.spirit.cloths.Wardrobe;
@@ -54,11 +56,19 @@ public class StoryOne {
 
         rooster.crow(czArrList);
 
-        Farmer farmer = new Farmer(wardrobe);
+        ConcreteMediator chatRoom = new ConcreteMediator();
+        Farmer farmer = new Farmer(chatRoom, wardrobe);
+        SuColleague suColleague = new SuColleague(chatRoom);
+        SuperVisor superVisor = new SuperVisor("pig", suColleague);
+
+        chatRoom.init(farmer, suColleague);
+
+        farmer.contact("Pig, you are super admin");
+        superVisor.contact("OK, I get it");
+
         farmer.wear();
         farmer.breedAnimal(rooster);
 
-        SuperVisor superVisor = new SuperVisor("pig");
         superVisor.addSuperVisor((Pig) czArrList.get(11));
 
         FarmVisitor fvFarmer = new FarmVisitor();
