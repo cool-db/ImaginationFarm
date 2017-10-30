@@ -1,6 +1,10 @@
 package imaginationfarm.abst.logger;
 
+import imaginationfarm.abst.logger.logAdapter.LogAdapter;
 import imaginationfarm.abst.logger.logFilter.AssertLogFilter;
+import imaginationfarm.abst.logger.printer.LoggerPrinter;
+import imaginationfarm.abst.logger.printer.LoggerPrinterTimeDecorator;
+import imaginationfarm.abst.logger.printer.Printer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +31,7 @@ public final class Logger {
 
     public static List<LogInfo> buffer = new ArrayList<>();
 
-    private static Printer printer = new LoggerPrinter();
+    private static Printer printer = new LoggerPrinterTimeDecorator();
 
     private Logger() {
         //no instance

@@ -1,4 +1,6 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.printer;
+
+import imaginationfarm.abst.logger.logAdapter.LogAdapter;
 
 public interface Printer {
 

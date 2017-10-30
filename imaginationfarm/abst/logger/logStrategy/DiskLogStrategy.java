@@ -1,6 +1,5 @@
 package imaginationfarm.abst.logger.logStrategy;
 
-import imaginationfarm.abst.logger.LogStrategy;
 import imaginationfarm.abst.logger.Logger;
 
 import java.io.FileWriter;

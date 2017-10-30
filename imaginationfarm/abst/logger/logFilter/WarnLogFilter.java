@@ -1,6 +1,5 @@
 package imaginationfarm.abst.logger.logFilter;
 
-import imaginationfarm.abst.logger.LogFilter;
 import imaginationfarm.abst.logger.LogInfo;
 
 import java.util.ArrayList;

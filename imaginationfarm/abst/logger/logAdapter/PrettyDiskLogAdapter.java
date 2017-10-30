@@ -1,8 +1,6 @@
 package imaginationfarm.abst.logger.logAdapter;
 
-import imaginationfarm.abst.logger.FormatStrategy;
-import imaginationfarm.abst.logger.LogAdapter;
-import imaginationfarm.abst.logger.formatStrategy.FormatStrategyMaker;
+import imaginationfarm.abst.logger.formatStrategy.FormatStrategy;
 import imaginationfarm.abst.logger.formatStrategy.PrettyFormatStrategy;
 import imaginationfarm.abst.logger.logStrategy.LogStrategyMaker;
 
