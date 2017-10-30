@@ -74,7 +74,7 @@ public class StoryOne {
         Meal breakfast = new Meal();
         BakeCake cakes = new BakeCake();
         cakes.bakeCake();
-        for (Cake cake: cakes.getCakes()) {
+        for (Cake cake : cakes.getCakes()) {
             breakfast.addItem(cake);
         }
 
@@ -103,13 +103,11 @@ public class StoryOne {
         fvSuperVisor.setSubject(superVisor.getSuperVisor().getClass().getSimpleName());
         fvSuperVisor.visit(farm.getDormitory());
 
-        superVisor.getSuperVisor().getSubordinates().forEach(item -> item.placeOrders());
+        superVisor.getSuperVisor().getSubordinates().forEach(ChineseZodiac::placeOrders);
 
         superVisor.getSuperVisor().sleep();
 
         CheckStateAction csa = new CheckStateAction(superVisor.getSuperVisor(), monkey);
-
-
 
         goat.takeOrder(csa);
         goat.placeOrders();
@@ -126,9 +124,7 @@ public class StoryOne {
         monkey.getCr().addNextNotifier(rat);
         rat.getCr().addNextNotifier(superVisor.getSuperVisor());
         superVisor.getSuperVisor().wakeUp();
-        goat.getCr().notify("The food in the fridgerator is not fresh.");
-
-
+        goat.getCr().notify("The food in the refrigerator is not fresh.");
 
     }
 }
