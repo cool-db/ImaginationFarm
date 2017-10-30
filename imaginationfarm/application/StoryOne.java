@@ -43,11 +43,6 @@ public class StoryOne {
         return cz;
     }
 
-    private void init() {
-        Logger.printer(new LoggerPrinterTimeDecorator());
-        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
-    }
-
 
     @Test
     public void test() {
@@ -59,7 +54,7 @@ public class StoryOne {
          * 外观模式
          * 策略模式
          */
-        init();
+        Logger.i("One day begins.");
 
         /**
          * 访问器模式
