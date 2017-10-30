@@ -128,8 +128,8 @@ public class StoryOne {
         fvGoat.setSubject(goat.getClass().getSimpleName());
         fvGoat.visit(farm.getCanteen());
 
-        Meal snakes = refrigerator.getCrisper(0).getMeal();
-        snakes.showItems();
+        Meal snacks = refrigerator.getCrisper(0).getMeal();
+        snacks.showItems();
 
         goat.getCr().addNextNotifier(monkey);
         monkey.getCr().addNextNotifier(rooster);
