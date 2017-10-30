@@ -5,7 +5,7 @@ import imaginationfarm.spirit.item.breakfirst.Meal;
 public class BreakFast extends Activity {
     private Meal meal;
 
-    public BreakFast(Meal meal) {
+    public void setMeal(Meal meal) {
         this.meal = meal;
     }
 

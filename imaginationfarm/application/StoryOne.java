@@ -43,6 +43,7 @@ public class StoryOne {
     public void test() {
         FarmForVisitor farm = new FarmForVisitor();
 
+        ActivityFactory acf = new ActivityFactory();
         AnimalFactory af = new AnimalFactory();
         Rooster rooster = (Rooster) af.getAnimal("rooster");
 
@@ -78,8 +79,9 @@ public class StoryOne {
             breakfast.addItem(cake);
         }
 
-        Activity activity = new BreakFast(breakfast);
-        activity.play();
+        BreakFast bfa = (BreakFast) acf.getActivity("breakfast");
+        bfa.setMeal(breakfast);
+        bfa.play();
 
         Crisper breakfastCrisper = new Crisper(breakfast);
         Refrigerator refrigerator = new Refrigerator();
