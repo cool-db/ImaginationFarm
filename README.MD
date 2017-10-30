@@ -5,6 +5,72 @@ Introduction
 --------
 A farm framework. You can use your imagination to build an application.
 
+项目结构
+--------
+
+├── abst  （抽象设计模式）  
+│   ├── abstFactory  
+│   ├── abstIter  
+│   ├── abstNullPattern  
+│   ├── abstStrategy  
+│   ├── chainRespon  
+│   ├── container  
+│   ├── interpret  
+│   ├── logger  
+│   │   ├── formatStrategy  
+│   │   ├── logAdapter  
+│   │   ├── logFilter  
+│   │   ├── logStrategy  
+│   │   └── printer  
+│   ├── mediator  
+│   ├── observe  
+│   ├── printFormat  
+│   ├── singlecharacter  
+│   └── state  
+├── application  （simple）  
+├── lib  （公共类库）  
+├── old  （早期测试）  
+├── spirit  （实体类）  
+│   ├── activity  
+│   │   ├── breed  
+│   │   ├── exerorder  
+│   │   └── girlToPig  
+│   ├── charactor  
+│   ├── creature  
+│   │   ├── animal  
+│   │   │   └── chineseZodiac  
+│   │   ├── crop  
+│   │   └── plant  
+│   ├── item  
+│   │   ├── IterSpirits  
+│   │   ├── abstProducts  
+│   │   ├── breakfasts  
+│   │   ├── breakfirst  
+│   │   ├── buildingshape  
+│   │   ├── cakes  
+│   │   ├── cleaner  
+│   │   ├── cloths  
+│   │   ├── hairstate  
+│   │   ├── momentoHairSpirit  
+│   │   ├── nullPatternSpirit  
+│   │   ├── snake  
+│   │   └── strategySpirit  
+│   └── place  
+├── story  （故事实例）  
+│   ├── action  
+│   ├── bakeCake  
+│   ├── chooseOutfits  
+│   ├── discoverHairStolen  
+│   ├── game  
+│   ├── girlToPig  
+│   ├── makeBreakfast  
+│   └── snakeconfess  
+└── test  （测试实例）
+
+开发工具
+--------
+**IntelliJ IDEA**
+
 Design Patterns
 --------
 **创建型模式**  
