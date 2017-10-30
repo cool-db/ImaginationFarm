@@ -46,6 +46,7 @@ public class StoryOne {
 
     @Test
     public void test() {
+
         /**
          * 装饰器模式
          * 迭代器模式

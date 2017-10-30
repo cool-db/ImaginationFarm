@@ -12,6 +12,10 @@ public class SuperVisor extends Observable {
     private SuColleague suCole;
     public String name = "";
 
+    public SuperVisor(String name) {
+        this.name = name;
+    }
+
     public SuperVisor(String name, SuColleague colleague) {
         this.name = name;
         this.suCole = colleague;

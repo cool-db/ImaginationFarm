@@ -23,7 +23,6 @@ public class FarmTest {
 //        Logger.d("debug");
 //        Logger.e("error");
 //        Logger.w("warning");
-        Logger.printer(new LoggerPrinterTimeDecorator());
         Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
         Logger.v("verbose");
         Logger.i("information");
