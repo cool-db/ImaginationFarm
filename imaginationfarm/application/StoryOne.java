@@ -43,6 +43,7 @@ public class StoryOne {
     public void test() {
         FarmForVisitor farm = new FarmForVisitor();
 
+        ActivityFactory acf = new ActivityFactory();
         AnimalFactory af = new AnimalFactory();
         Rooster rooster = (Rooster) af.getAnimal("rooster");
 
@@ -74,12 +75,13 @@ public class StoryOne {
         Meal breakfast = new Meal();
         BakeCake cakes = new BakeCake();
         cakes.bakeCake();
-        for (Cake cake: cakes.getCakes()) {
+        for (Cake cake : cakes.getCakes()) {
             breakfast.addItem(cake);
         }
 
-        Activity activity = new BreakFast(breakfast);
-        activity.play();
+        BreakFast bfa = (BreakFast) acf.getActivity("breakfast");
+        bfa.setMeal(breakfast);
+        bfa.play();
 
         Crisper breakfastCrisper = new Crisper(breakfast);
         Refrigerator refrigerator = new Refrigerator();
@@ -109,8 +111,6 @@ public class StoryOne {
 
         CheckStateAction csa = new CheckStateAction(superVisor.getSuperVisor(), monkey);
 
-
-
         goat.takeOrder(csa);
         goat.placeOrders();
 
@@ -127,7 +127,6 @@ public class StoryOne {
         rat.getCr().addNextNotifier(superVisor.getSuperVisor());
         superVisor.getSuperVisor().wakeUp();
         goat.getCr().notify("The food in the fridgerator is not fresh.");
-
 
 
     }
