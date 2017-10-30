@@ -9,7 +9,7 @@ public class ChargeAction implements Action {
         this.aim = aim;
         this.reason = reason;
     }
-    public void excute() {
+    public void excute(ChineseZodiac src) {
         System.out.println(aim.getClass().getName() + " is charged for " + reason + ".");
     }
 }

@@ -1,15 +1,15 @@
 package imaginationfarm.spirit.creature.animal.chineseZodiac;
 
-import imaginationfarm.spirit.creature.animal.Animal;
+import java.util.List;
 
 public class Rooster extends ChineseZodiac {
-    public void crow(ChineseZodiac[] animals) {
+    public void crow(List<ChineseZodiac> animals) {
         this.wakeUp();
         System.out.println("Rooster is crowing.");
-        for (ChineseZodiac animal: animals) {
-            if (animal.getClass() != this.getClass()) {
+        for (ChineseZodiac animal : animals) {
+            if (!animal.equals(this)) {
                 animal.wakeUp();
-                System.out.println(animal.getClass().getName() + "wakes up.");
+                System.out.println(animal.getClass().getSimpleName() + " wakes up.");
             }
         }
     }

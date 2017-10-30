@@ -1,4 +1,3 @@
-import imaginationfarm.abst.logger.logAdapter.CommonLogAdapter;
 import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
 import imaginationfarm.spirit.item.*;
@@ -32,7 +31,7 @@ public class FarmTest {
         vegMeal.showItems();
         System.out.println("Total Cost: " + vegMeal.getCost());
 
-        Refridgerator r = new Refridgerator();
+        Refrigerator r = new Refrigerator();
         Crisper c = new Crisper(vegMeal);
         r.addCrisper(c);
 

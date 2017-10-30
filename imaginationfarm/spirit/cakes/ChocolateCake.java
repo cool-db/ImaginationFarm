@@ -22,7 +22,6 @@ public class ChocolateCake extends Cake {
 	@Override
 	protected Cake clone() {
 		ChocolateCake chocolateCake=new ChocolateCake(1);
-		System.out.println("ChocolateCake: id = "+chocolateCake._id+": clone: I'm cloned.");
 		return chocolateCake;
 	}
 
@@ -33,7 +32,7 @@ public class ChocolateCake extends Cake {
 
 	@Override
 	public void bake() {
-		System.out.println("ChocolateCake: id = "+_id+": bake: I'm baked.");
+		System.out.println("ChocolateCake is baked.");
 	}
 
 }
