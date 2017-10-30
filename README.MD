@@ -38,7 +38,7 @@ Logger使用static实现了单例模式
 ```
 日志系统，适配不同的log模式
 ```
-- [ ] 桥接模式（Bridge Pattern）
+- [x] 桥接模式（Bridge Pattern）
 ```
 养家禽
 ```
@@ -46,11 +46,11 @@ Logger使用static实现了单例模式
 ```
 日志系统，loglevel
 ```
-- [ ] 组合模式（Composite Pattern）
+- [x] 组合模式（Composite Pattern）
 ```
 给家禽加职位
 ```
-- [ ] 装饰器模式（Decorator Pattern）
+- [x] 装饰器模式（Decorator Pattern）
 ```
 日志系统，适配不同的log模式
 ```
@@ -58,22 +58,22 @@ Logger使用static实现了单例模式
 ```
 日志系统，分别包装了FormatStrategy,LogAdapter,LogStrategy
 ```
-- [ ] 享元模式（Flyweight Pattern）
+- [x] 享元模式（Flyweight Pattern）
 ```
 日志系统，适配不同的log模式
 ```
-- [ ] 代理模式（Proxy Pattern）
+- [x] 代理模式（Proxy Pattern）
 ```
 设置supervisor角色
 ```
 
 **行为型模式**  
 *这些设计模式特别关注对象之间的通信。*
-- [ ] 责任链模式（Chain of Responsibility Pattern）
+- [x] 责任链模式（Chain of Responsibility Pattern）
 ```
 传递通知
 ```
-- [ ] 命令模式（Command Pattern）
+- [x] 命令模式（Command Pattern）
 ```
 分发命令
 ```
@@ -85,32 +85,32 @@ Logger使用static实现了单例模式
 ```
 十二生肖的名单列表
 ```
-- [ ] 中介者模式（Mediator Pattern）
+- [x] 中介者模式（Mediator Pattern）
 ```
 
 ```
-- [ ] 备忘录模式（Memento Pattern）
+- [x] 备忘录模式（Memento Pattern）
 ```
 冰箱冷藏食品
 ```
-- [ ] 观察者模式（Observer Pattern）
+- [x] 观察者模式（Observer Pattern）
 ```
 通知
 ```
-- [ ] 状态模式（State Pattern）
+- [x] 状态模式（State Pattern）
 ```
 角色死亡、清醒、睡眠三种状态
 ```
-- [ ] 空对象模式（Null Object Pattern）
+- [x] 空对象模式（Null Object Pattern）
 - [x] 策略模式（Strategy Pattern）
 ```
 日志系统，不同的log格式
 ```
-- [ ] 模板模式（Template Pattern）
+- [x] 模板模式（Template Pattern）
 ```
 日志系统，适配不同的log模式
 ```
-- [ ] 访问者模式（Visitor Pattern）
+- [x] 访问者模式（Visitor Pattern）
 ```
 日志系统，适配不同的log模式
 ```
