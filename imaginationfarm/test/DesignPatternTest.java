@@ -92,9 +92,10 @@ public class DesignPatternTest {
 
     @Test
     public void Proxy() {
-//        AnimalFactory animalFactory = new AnimalFactory();
-//        SuperVisor superVisor = new SuperVisor("father");
-//        superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
+        AnimalFactory animalFactory = new AnimalFactory();
+        SuperVisor superVisor = new SuperVisor("father");
+        superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
+        System.out.println(superVisor.getSuperVisor().getClass().getSimpleName());
     }
 
     @Test
@@ -111,7 +112,7 @@ public class DesignPatternTest {
         dog.getCr().addNextNotifier(goat);
         goat.getCr().addNextNotifier(ox);
         goat.getCr().addNextNotifier(rat);
-        dog.getCr().notify("hello");
+        dog.getCr().notified("hi", rat);
         System.out.println("end");
     }
 

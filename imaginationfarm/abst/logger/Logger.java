@@ -31,7 +31,7 @@ public final class Logger {
 
     public static List<LogInfo> buffer = new ArrayList<>();
 
-    private static Printer printer = new LoggerPrinterTimeDecorator();
+    private static Printer printer = new LoggerPrinter();
 
     private Logger() {
         //no instance
