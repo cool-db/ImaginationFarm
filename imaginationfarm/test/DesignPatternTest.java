@@ -1,15 +1,26 @@
 package imaginationfarm.test;
 
+import imaginationfarm.abst.container.Iterator;
+import imaginationfarm.abst.logger.Logger;
+import imaginationfarm.abst.logger.formatStrategy.CommonFormatStrategy;
+import imaginationfarm.abst.logger.formatStrategy.FormatStrategy;
+import imaginationfarm.abst.logger.formatStrategy.FormatStrategyMaker;
+import imaginationfarm.abst.logger.formatStrategy.PrettyFormatStrategy;
+import imaginationfarm.abst.logger.logAdapter.CommonLogAdapter;
+import imaginationfarm.abst.logger.logAdapter.LogAdapter;
+import imaginationfarm.abst.logger.logAdapter.PrettyDiskLogAdapter;
 import imaginationfarm.abst.interpret.BinaryExpression;
 import imaginationfarm.abst.interpret.NumberExpression;
 import imaginationfarm.abst.interpret.OpExpressionEnum;
 import imaginationfarm.abst.logger.Logger;
+import imaginationfarm.abst.logger.printer.LoggerPrinterTimeDecorator;
 import imaginationfarm.abst.mediator.ConcreteMediator;
 import imaginationfarm.spirit.activity.ActivityFactory;
 import imaginationfarm.spirit.activity.BreakFast;
 import imaginationfarm.spirit.activity.Party;
 import imaginationfarm.spirit.charactor.Farmer;
 import imaginationfarm.spirit.charactor.ChineseZodiacs;
+import imaginationfarm.spirit.charactor.ChineseZodiacsList;
 import imaginationfarm.spirit.charactor.SuColleague;
 import imaginationfarm.spirit.charactor.SuperVisor;
 import imaginationfarm.spirit.creature.animal.AnimalFactory;
@@ -35,15 +46,14 @@ public class DesignPatternTest {
     @Test
     public void Factory() {
         AnimalFactory animalFactory = new AnimalFactory();
-        System.out.println(animalFactory.getAnimal("rat"));
-        System.out.println(animalFactory.getAnimal("rat"));
+        assert animalFactory.getAnimal("rat") != null;
     }
 
     @Test
     public void AbstractFactory() {
         CreatureFactory animalFactory = FactoryProducer.getFactory("animal");
-        System.out.println(animalFactory.getAnimal("rat"));
-        System.out.println(animalFactory.getAnimal("rat"));
+        assert animalFactory != null;
+        assert animalFactory.getAnimal("rat") != null;
     }
 
     @Test
@@ -78,7 +88,11 @@ public class DesignPatternTest {
 
     @Test
     public void Adapter() {
+        Logger.addLogAdapter(new PrettyDiskLogAdapter());
+        Logger.i("pretty format in disk");
 
+        Logger.addLogAdapter(new CommonLogAdapter());
+        Logger.i("common format on console");
     }
 
     @Test
@@ -90,7 +104,16 @@ public class DesignPatternTest {
 
     @Test
     public void Filter() {
-
+        FormatStrategy formatStrategy = FormatStrategyMaker.getPrettyFormatStrategy();
+        Logger.addLogAdapter(new CommonLogAdapter(formatStrategy));
+        Logger.setLogType(false, true, false, true, true, true);
+        Logger.enableBuffer(true);
+        Logger.v("disabled");
+        Logger.d("enabled");
+        Logger.i("disabled");
+        Logger.w("enabled");
+        Logger.e("enabled");
+        Logger.sync();
     }
 
     @Test
@@ -116,11 +139,16 @@ public class DesignPatternTest {
 
     @Test
     public void Decorator() {
-
+        Logger.printer(new LoggerPrinterTimeDecorator());
+        Logger.i("Time!");
     }
 
     @Test
     public void Facade() {
+        FormatStrategy formatStrategy = FormatStrategyMaker.getPrettyFormatStrategy();
+        Logger.addLogAdapter(new CommonLogAdapter(formatStrategy));
+
+        Logger.i("Pretty Print");
 
     }
 
@@ -137,7 +165,7 @@ public class DesignPatternTest {
     public void Proxy() {
         AnimalFactory animalFactory = new AnimalFactory();
         SuperVisor superVisor = new SuperVisor("father");
-        superVisor.addSuperVisor((ChineseZodiac)animalFactory.getAnimal("rat"));
+        superVisor.addSuperVisor((ChineseZodiac) animalFactory.getAnimal("rat"));
         System.out.println(superVisor.getSuperVisor().getClass().getSimpleName());
     }
 
@@ -186,7 +214,10 @@ public class DesignPatternTest {
 
     @Test
     public void Iterator() {
-
+        for (Iterator iter = ChineseZodiacsList.INSTANCE.getIterator(); iter.hasNext(); ) {
+            String name = (String) iter.next();
+            System.out.println("Name : " + name);
+        }
     }
 
     @Test
@@ -252,6 +283,16 @@ public class DesignPatternTest {
 
     @Test
     public void Strategy() {
+        FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder().build();
+        Logger.addLogAdapter(new CommonLogAdapter(formatStrategy));
+
+        Logger.i("Pretty Print");
+
+        Logger.clearLogAdapters();
+
+        FormatStrategy formatStrategy2 = new CommonFormatStrategy();
+        Logger.addLogAdapter(new CommonLogAdapter(formatStrategy2));
+        Logger.i("Common Print");
 
     }
 
