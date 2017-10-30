@@ -9,6 +9,8 @@ public class CheckStateAction implements Action {
     public CheckStateAction(ChineseZodiac aim, ChineseZodiac commander) {
         this.aim = aim;
         this.commander = commander;
+        System.out.println(commander.getClass().getSimpleName() + " requests to check whether " +
+                aim.getClass().getSimpleName() + " is awake.");
     }
 
     public void excute(ChineseZodiac src) {

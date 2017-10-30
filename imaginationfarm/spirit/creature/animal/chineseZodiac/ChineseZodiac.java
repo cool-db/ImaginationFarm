@@ -7,8 +7,26 @@ import imaginationfarm.abst.chainRespon.ChainOfResponsibility;
 import imaginationfarm.abst.observe.Observer;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ChineseZodiac extends Animal implements Observer {
+    private List<ChineseZodiac> subordinates;
+    public ChineseZodiac(){
+        subordinates = new ArrayList<ChineseZodiac>();
+    }
+    public void add(ChineseZodiac e) {
+        subordinates.add(e);
+    }
+    public void remove(ChineseZodiac e) {
+        subordinates.remove(e);
+    }
+    public List<ChineseZodiac> getSubordinates(){
+        return subordinates;
+    }
+    public String toString(){
+        return ("ChineseZodiac : Name : "+ this.getClass().getSimpleName());
+    }
+
 
     private ChainOfResponsibility cr = new ChainOfResponsibility(this);
     private ArrayList<Action> actionList = new ArrayList<>();

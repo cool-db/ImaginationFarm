@@ -57,11 +57,11 @@ public class StoryOne {
         farmer.wear();
 
         SuperVisor superVisor = new SuperVisor("pig");
-        superVisor.addSuperVisor(new Pig());
+        superVisor.addSuperVisor((Pig) czArrList.get(11));
 
-        FarmVisitor farmVisitor = new FarmVisitor();
-        farmVisitor.setSubject(farmer.getClass().getSimpleName());
-        farmVisitor.visit(farm.getCanteen());
+        FarmVisitor fvFarmer = new FarmVisitor();
+        fvFarmer.setSubject(farmer.getClass().getSimpleName());
+        fvFarmer.visit(farm.getCanteen());
 
         for (ChineseZodiac cz : czArrList) {
             superVisor.addObserver(cz);
@@ -76,10 +76,10 @@ public class StoryOne {
         for (Cake cake: cakes.getCakes()) {
             breakfast.addItem(cake);
         }
+        breakfast.showItems();
         Crisper breakfastCrisper = new Crisper(breakfast);
         Refrigerator refrigerator = new Refrigerator();
         refrigerator.addCrisper(breakfastCrisper);
-        breakfastCrisper.getMeal().showItems();
 
         OpExpressionEnum plus = OpExpressionEnum.PlusExpression;
         int result = new BinaryExpression(new NumberExpression(8), plus, new NumberExpression(2)).interpret();
@@ -88,10 +88,35 @@ public class StoryOne {
         Monkey monkey = (Monkey) czArrList.get(8);
         Goat goat = (Goat) czArrList.get(7);
 
+        VisitAction morningOrder = new VisitAction(farm.getPlayground(), "grow crops");
+        monkey.takeOrder(morningOrder);
+        goat.takeOrder(morningOrder);
+
+        FarmVisitor fvSuperVisor = new FarmVisitor();
+        fvSuperVisor.setSubject(superVisor.getSuperVisor().getClass().getSimpleName());
+        fvSuperVisor.visit(farm.getDormitory());
+
+        monkey.placeOrders();
+        goat.placeOrders();
+
+        superVisor.getSuperVisor().sleep();
+
         CheckStateAction csa = new CheckStateAction(superVisor.getSuperVisor(), monkey);
+
+
 
         goat.takeOrder(csa);
         goat.placeOrders();
+
+        FarmVisitor fvGoat = new FarmVisitor();
+        fvGoat.setSubject(goat.getClass().getSimpleName());
+        fvGoat.visit(farm.getCanteen());
+
+        Meal snakes = refrigerator.getCrisper(0).getMeal();
+        snakes.showItems();
+
+
+
 
     }
 }
