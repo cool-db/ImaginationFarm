@@ -1,6 +1,8 @@
 package imaginationfarm.abst.abstFactory;
 
 
+import imaginationfarm.abst.logger.Logger;
+
 public class AnimalProducts implements Products{
     public String id = "";
 
@@ -14,10 +16,10 @@ public class AnimalProducts implements Products{
     }
 
     public void create(){
-        System.out.println(this.getClass().getName() + ": " + id + ": " + "create" + ": " + "I'm created");
+        Logger.i(this.getClass().getName() + ": " + id + ": " + "create" + ": " + "I'm created");
     }
 
     public void use() {
-        System.out.println(this.getClass().getName() + ": " + id + ": " + "use" + ": " + "I'm used");
+        Logger.i(this.getClass().getName() + ": " + id + ": " + "use" + ": " + "I'm used");
     }
 }

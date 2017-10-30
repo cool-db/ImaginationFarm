@@ -1,5 +1,6 @@
 package imaginationfarm.story.action;
 
+import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
 
 public class ChargeAction implements Action {
@@ -10,6 +11,6 @@ public class ChargeAction implements Action {
         this.reason = reason;
     }
     public void excute(ChineseZodiac src) {
-        System.out.println(aim.getClass().getName() + " is charged for " + reason + ".");
+        Logger.i(aim.getClass().getName() + " is charged for " + reason + ".");
     }
 }

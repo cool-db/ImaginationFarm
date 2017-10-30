@@ -1,5 +1,6 @@
 package imaginationfarm.spirit.charactor;
 
+import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.spirit.item.cloths.Wardrobe;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.ChineseZodiac;
 
@@ -18,10 +19,10 @@ public class Farmer {
     }
 
     public void wear() {
-        System.out.println(this.getClass().getSimpleName() + wardrobe.wear());
+        Logger.i(this.getClass().getSimpleName() + wardrobe.wear());
     }
 
     public void breedAnimal(ChineseZodiac chineseZodiac) {
-        System.out.println("Farmer is breeding a(n) " + chineseZodiac.getClass().getSimpleName());
+        Logger.i("Farmer is breeding a(n) " + chineseZodiac.getClass().getSimpleName());
     }
 }

@@ -1,10 +1,12 @@
 package imaginationfarm.spirit.item.cloths;
 
+import imaginationfarm.abst.logger.Logger;
+
 //单例模式衣柜，即builder中的director
 public class Wardrobe {
 
     private Wardrobe() {
-        System.out.println("Wardrobe opened.");
+        Logger.i("Wardrobe opened.");
     }
 
     private static final Wardrobe wardrobe = new Wardrobe();

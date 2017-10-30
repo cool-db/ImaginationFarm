@@ -18,11 +18,11 @@ public class FarmTest {
 
     @Test
     public void Logger() {
-        Logger.printer(new LoggerPrinter());
-        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
-        Logger.d("debug");
-        Logger.e("error");
-        Logger.w("warning");
+//        Logger.printer(new LoggerPrinter());
+//        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
+//        Logger.d("debug");
+//        Logger.e("error");
+//        Logger.w("warning");
         Logger.printer(new LoggerPrinterTimeDecorator());
         Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
         Logger.v("verbose");

@@ -1,5 +1,8 @@
 package imaginationfarm.application;
 
+import imaginationfarm.abst.logger.Logger;
+import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
+import imaginationfarm.abst.logger.printer.LoggerPrinterTimeDecorator;
 import imaginationfarm.spirit.item.cakes.Cake;
 import imaginationfarm.abst.interpret.BinaryExpression;
 import imaginationfarm.abst.interpret.NumberExpression;
@@ -38,9 +41,16 @@ public class StoryOne {
         return cz;
     }
 
+    private void init () {
+        Logger.printer(new LoggerPrinterTimeDecorator());
+        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
+    }
+
 
     @Test
     public void test() {
+        init();
+
         FarmForVisitor farm = new FarmForVisitor();
 
         ActivityFactory acf = new ActivityFactory();
@@ -49,11 +59,10 @@ public class StoryOne {
 
         ArrayList<ChineseZodiac> czArrList = getAnimalList(af);
 
-        Wardrobe wardrobe = Wardrobe.getInstance();
-        wardrobe.setcBuilder(new Suit());
-
         rooster.crow(czArrList);
 
+        Wardrobe wardrobe = Wardrobe.getInstance();
+        wardrobe.setcBuilder(new Suit());
         Farmer farmer = new Farmer(wardrobe);
         farmer.wear();
         farmer.breedAnimal(rooster);
@@ -89,7 +98,7 @@ public class StoryOne {
 
         OpExpressionEnum plus = OpExpressionEnum.PlusExpression;
         int result = new BinaryExpression(new NumberExpression(8), plus, new NumberExpression(2)).interpret();
-        System.out.println("Two hours later, the time is " + result + " am");
+        Logger.i("Two hours later, the time is " + result + " am");
 
         Monkey monkey = (Monkey) czArrList.get(8);
         Goat goat = (Goat) czArrList.get(7);

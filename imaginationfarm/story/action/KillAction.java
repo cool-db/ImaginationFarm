@@ -1,5 +1,6 @@
 package imaginationfarm.story.action;
 
+import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
 
 public class KillAction implements Action {
@@ -9,6 +10,6 @@ public class KillAction implements Action {
     }
     public void excute(ChineseZodiac src) {
         aim.die();
-        System.out.println(aim.getClass().getName() + " is killed.");
+        Logger.i(aim.getClass().getName() + " is killed.");
     }
 }

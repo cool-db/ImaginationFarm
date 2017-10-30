@@ -1,5 +1,7 @@
 package imaginationfarm.spirit.place;
 
+import imaginationfarm.abst.logger.Logger;
+
 public class FarmVisitor implements FarmPartVisitor {
 
     private String subject;
@@ -9,7 +11,7 @@ public class FarmVisitor implements FarmPartVisitor {
     }
 
     private void visitLog(Object o) {
-        System.out.println(subject + " visit " + o.getClass().getSimpleName() + ".");
+        Logger.i(subject + " visit " + o.getClass().getSimpleName() + ".");
     }
 
     @Override

@@ -1,14 +1,16 @@
 package imaginationfarm.spirit.activity;
 
+import imaginationfarm.abst.logger.Logger;
+
 public class Party extends Activity {
 
     @Override
     void startPlay() {
-        System.out.println("The party starts!");
+        Logger.i("The party starts!");
     }
 
     @Override
     void endPlay() {
-        System.out.println("The party ends!");
+        Logger.i("The party ends!");
     }
 }

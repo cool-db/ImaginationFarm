@@ -1,5 +1,7 @@
 package imaginationfarm.spirit.item.cakes;
 
+import imaginationfarm.abst.logger.Logger;
+
 public class GrassCake extends Cake {
 
 	int _id;
@@ -32,7 +34,7 @@ public class GrassCake extends Cake {
 
 	@Override
 	public void bake() {
-		System.out.println("GrassCake is baked.");
+		Logger.i("GrassCake is baked.");
 	}
 
 }

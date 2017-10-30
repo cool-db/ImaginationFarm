@@ -1,5 +1,6 @@
 package imaginationfarm.spirit.creature.animal.chineseZodiac;
 
+import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.abst.observe.Observable;
 import imaginationfarm.story.action.*;
 import imaginationfarm.spirit.creature.animal.Animal;
@@ -63,7 +64,7 @@ public class ChineseZodiac extends Animal implements Observer {
             takeOrder((Action) args);
             placeOrders();
         } else {
-            System.out.println(this.getClass().getSimpleName() + " get the message: " + args);
+            Logger.i(this.getClass().getSimpleName() + " get the message: " + args);
         }
     }
 

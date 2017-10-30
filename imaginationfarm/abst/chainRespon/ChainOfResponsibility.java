@@ -1,5 +1,6 @@
 package imaginationfarm.abst.chainRespon;
 
+import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.ChineseZodiac;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class ChainOfResponsibility {
 
     public void notified(String notification, ChineseZodiac from) {
         if (!source.getState().isAwake()) return;
-        System.out.println(source.getClass().getSimpleName() + " get notification from " +
+        Logger.i(source.getClass().getSimpleName() + " get notification from " +
                 from.getClass().getSimpleName() + ": " + notification);
         notify(notification);
     }
