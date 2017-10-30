@@ -1,8 +1,9 @@
 package imaginationfarm.abst.logger.formatStrategy;
 
 import imaginationfarm.abst.logger.*;
+import imaginationfarm.abst.logger.logStrategy.LogStrategy;
 import imaginationfarm.abst.logger.logStrategy.LogStrategyMaker;
-import imaginationfarm.abst.logger.logStrategy.PrintLogStrategy;
+import imaginationfarm.abst.logger.printer.LoggerPrinter;
 
 public class PrettyFormatStrategy implements FormatStrategy {
 

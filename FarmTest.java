@@ -1,5 +1,7 @@
 import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
+import imaginationfarm.abst.logger.printer.LoggerPrinter;
+import imaginationfarm.abst.logger.printer.LoggerPrinterTimeDecorator;
 import imaginationfarm.spirit.activity.Activity;
 import imaginationfarm.spirit.activity.Party;
 import imaginationfarm.spirit.charactor.Farmer;
@@ -14,10 +16,13 @@ public class FarmTest {
 
     @Test
     public void Logger() {
-        Logger.addLogAdapter(LogAdapterMaker.getPrettyDiskLogAdapter());
+        Logger.printer(new LoggerPrinter());
+        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
         Logger.d("debug");
         Logger.e("error");
         Logger.w("warning");
+        Logger.printer(new LoggerPrinterTimeDecorator());
+        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
         Logger.v("verbose");
         Logger.i("information");
         Logger.wtf("wtf!!!!");
@@ -52,19 +57,19 @@ public class FarmTest {
     }
 
     @Test
-    public static void TestBreed(){
-        Farmer farmer= new Farmer();
+    public static void TestBreed() {
+        Farmer farmer = new Farmer();
         farmer.breedAnimal(new Dog());
     }
 
     @Test
-    public static void TestActivity(){
+    public static void TestActivity() {
         Activity activity = new Party();
         activity.play();
     }
 
     @Test
-    public static void TestComposite(){
+    public static void TestComposite() {
         ChineseZodiac CEO = new Dragon();
         ChineseZodiac headSales = new Dog();
         ChineseZodiac headMarketing = new Goat();

@@ -1,4 +1,4 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.formatStrategy;
 
 public interface FormatStrategy {
 

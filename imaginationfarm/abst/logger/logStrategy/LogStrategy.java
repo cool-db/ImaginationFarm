@@ -1,4 +1,4 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.logStrategy;
 
 public interface LogStrategy {
 

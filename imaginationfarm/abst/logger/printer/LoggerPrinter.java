@@ -1,5 +1,7 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.printer;
 
+import imaginationfarm.abst.logger.Utils;
+import imaginationfarm.abst.logger.logAdapter.LogAdapter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

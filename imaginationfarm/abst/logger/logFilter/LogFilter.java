@@ -1,4 +1,6 @@
-package imaginationfarm.abst.logger;
+package imaginationfarm.abst.logger.logFilter;
+
+import imaginationfarm.abst.logger.LogInfo;
 
 import java.util.List;
 
