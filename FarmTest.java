@@ -70,10 +70,10 @@ public class FarmTest {
         ChineseZodiac headMarketing = new Goat();
         ChineseZodiac clerk = new Horse();
         ChineseZodiac salesExecutive = new Monkey();
-        CEO.add(headSales);
-        CEO.add(headMarketing);
-        headSales.add(salesExecutive);
-        headMarketing.add(clerk);
+        CEO.addSubordinates(headSales);
+        CEO.addSubordinates(headMarketing);
+        headSales.addSubordinates(salesExecutive);
+        headMarketing.addSubordinates(clerk);
 
         System.out.println(CEO);
         for (ChineseZodiac headEmployee : CEO.getSubordinates()) {

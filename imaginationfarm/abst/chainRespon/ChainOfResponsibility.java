@@ -31,18 +31,19 @@ public class ChainOfResponsibility {
     }
 
     public void notify(String notification) {
+        if (!source.getState().isAwake()) return;
         // Notify My Next Notifier
         if (!nextNotifier.isEmpty()) {
             for (ChineseZodiac notifier : nextNotifier) {
-                notifier.getCr().notified(notification);
+                notifier.getCr().notified(notification, source);
             }
         }
     }
 
-    public void notified(String notification) {
+    public void notified(String notification, ChineseZodiac from) {
         if (!source.getState().isAwake()) return;
-        System.out.println(source.getClass().getSimpleName() + " get notification: " + notification);
-
+        System.out.println(source.getClass().getSimpleName() + " get notification from " +
+                from.getClass().getSimpleName() + ": " + notification);
         notify(notification);
     }
 

@@ -109,7 +109,7 @@ public class DesignPatternTest {
         dog.getCr().addNextNotifier(goat);
         goat.getCr().addNextNotifier(ox);
         goat.getCr().addNextNotifier(rat);
-        dog.getCr().notified("hello");
+        dog.getCr().notify("hello");
         System.out.println("end");
     }
 

@@ -4,12 +4,12 @@ import imaginationfarm.abst.cake.Cake;
 import imaginationfarm.abst.interpret.BinaryExpression;
 import imaginationfarm.abst.interpret.NumberExpression;
 import imaginationfarm.abst.interpret.OpExpressionEnum;
+import imaginationfarm.spirit.activity.*;
 import imaginationfarm.spirit.charactor.Farmer;
 import imaginationfarm.spirit.charactor.SuperVisor;
 import imaginationfarm.spirit.cloths.Suit;
 import imaginationfarm.spirit.cloths.Wardrobe;
 import imaginationfarm.spirit.creature.animal.AnimalFactory;
-import imaginationfarm.spirit.creature.animal.chineseZodiac.ChineseZodiac;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
 import imaginationfarm.spirit.item.Crisper;
 import imaginationfarm.spirit.item.Refrigerator;
@@ -55,6 +55,7 @@ public class StoryOne {
 
         Farmer farmer = new Farmer(wardrobe);
         farmer.wear();
+        farmer.breedAnimal(rooster);
 
         SuperVisor superVisor = new SuperVisor("pig");
         superVisor.addSuperVisor((Pig) czArrList.get(11));
@@ -76,7 +77,10 @@ public class StoryOne {
         for (Cake cake: cakes.getCakes()) {
             breakfast.addItem(cake);
         }
-        breakfast.showItems();
+
+        Activity activity = new BreakFast(breakfast);
+        activity.play();
+
         Crisper breakfastCrisper = new Crisper(breakfast);
         Refrigerator refrigerator = new Refrigerator();
         refrigerator.addCrisper(breakfastCrisper);
@@ -87,17 +91,19 @@ public class StoryOne {
 
         Monkey monkey = (Monkey) czArrList.get(8);
         Goat goat = (Goat) czArrList.get(7);
+        Rat rat = (Rat) czArrList.get(0);
+
+        superVisor.getSuperVisor().addSubordinates(monkey);
+        superVisor.getSuperVisor().addSubordinates(goat);
 
         VisitAction morningOrder = new VisitAction(farm.getPlayground(), "grow crops");
-        monkey.takeOrder(morningOrder);
-        goat.takeOrder(morningOrder);
+        superVisor.getSuperVisor().getSubordinates().forEach(item -> item.takeOrder(morningOrder));
 
         FarmVisitor fvSuperVisor = new FarmVisitor();
         fvSuperVisor.setSubject(superVisor.getSuperVisor().getClass().getSimpleName());
         fvSuperVisor.visit(farm.getDormitory());
 
-        monkey.placeOrders();
-        goat.placeOrders();
+        superVisor.getSuperVisor().getSubordinates().forEach(item -> item.placeOrders());
 
         superVisor.getSuperVisor().sleep();
 
@@ -115,6 +121,12 @@ public class StoryOne {
         Meal snakes = refrigerator.getCrisper(0).getMeal();
         snakes.showItems();
 
+        goat.getCr().addNextNotifier(monkey);
+        monkey.getCr().addNextNotifier(rooster);
+        monkey.getCr().addNextNotifier(rat);
+        rat.getCr().addNextNotifier(superVisor.getSuperVisor());
+        superVisor.getSuperVisor().wakeUp();
+        goat.getCr().notify("The food in the fridgerator is not fresh.");
 
 
 

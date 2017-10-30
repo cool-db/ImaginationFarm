@@ -12,6 +12,7 @@ public class Refrigerator {
     }
 
     public Crisper getCrisper(int index) {
+        System.out.println("A crisper is taken out from the refridgerator.");
         return crisperList.get(index);
     }
 
