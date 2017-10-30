@@ -1,5 +1,7 @@
 package imaginationfarm.spirit.item.breakfirst;
 
+import imaginationfarm.abst.logger.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +22,7 @@ public class Meal {
 
    public void showItems(){
       for (Item item : items) {
-         System.out.print("Item : "+item.name());
-         System.out.print(", Packing : "+item.packing().pack());
-         System.out.println(", Price : "+item.price());
+         Logger.i("Item : "+item.name() + ", Packing : "+item.packing().pack() + ", Price : "+item.price());
       }     
    }
 }

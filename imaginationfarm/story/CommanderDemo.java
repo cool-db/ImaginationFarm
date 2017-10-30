@@ -1,9 +1,9 @@
 package imaginationfarm.story;
 
 import imaginationfarm.abst.abstIter.Commander;
-import imaginationfarm.spirit.IterSpirits.Animals;
-import imaginationfarm.spirit.IterSpirits.BreakfastTeam;
-import imaginationfarm.spirit.IterSpirits.ExerciseTeam;
+import imaginationfarm.spirit.item.IterSpirits.Animals;
+import imaginationfarm.spirit.item.IterSpirits.BreakfastTeam;
+import imaginationfarm.spirit.item.IterSpirits.ExerciseTeam;
 
 public class CommanderDemo {
     public void teamUp(){

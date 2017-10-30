@@ -1,6 +1,9 @@
 package imaginationfarm.application;
 
-import imaginationfarm.abst.cake.Cake;
+import imaginationfarm.abst.logger.Logger;
+import imaginationfarm.abst.logger.logAdapter.LogAdapterMaker;
+import imaginationfarm.abst.logger.printer.LoggerPrinterTimeDecorator;
+import imaginationfarm.spirit.item.cakes.Cake;
 import imaginationfarm.abst.interpret.BinaryExpression;
 import imaginationfarm.abst.interpret.NumberExpression;
 import imaginationfarm.abst.interpret.OpExpressionEnum;
@@ -9,15 +12,15 @@ import imaginationfarm.spirit.activity.*;
 import imaginationfarm.spirit.charactor.Farmer;
 import imaginationfarm.spirit.charactor.SuColleague;
 import imaginationfarm.spirit.charactor.SuperVisor;
-import imaginationfarm.spirit.cloths.Suit;
-import imaginationfarm.spirit.cloths.Wardrobe;
+import imaginationfarm.spirit.item.cloths.Suit;
+import imaginationfarm.spirit.item.cloths.Wardrobe;
 import imaginationfarm.spirit.creature.animal.AnimalFactory;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
 import imaginationfarm.spirit.item.Crisper;
 import imaginationfarm.spirit.item.Refrigerator;
 import imaginationfarm.spirit.item.breakfirst.Meal;
-import imaginationfarm.spirit.visitor.FarmForVisitor;
-import imaginationfarm.spirit.visitor.FarmVisitor;
+import imaginationfarm.spirit.place.FarmForVisitor;
+import imaginationfarm.spirit.place.FarmVisitor;
 import imaginationfarm.story.action.CheckStateAction;
 import imaginationfarm.story.action.VisitAction;
 import imaginationfarm.story.bakeCake.BakeCake;
@@ -40,9 +43,16 @@ public class StoryOne {
         return cz;
     }
 
+    private void init () {
+        Logger.printer(new LoggerPrinterTimeDecorator());
+        Logger.addLogAdapter(LogAdapterMaker.getCommonLogAdapter());
+    }
+
 
     @Test
     public void test() {
+        init();
+
         FarmForVisitor farm = new FarmForVisitor();
 
         ActivityFactory acf = new ActivityFactory();
@@ -51,10 +61,10 @@ public class StoryOne {
 
         ArrayList<ChineseZodiac> czArrList = getAnimalList(af);
 
+        rooster.crow(czArrList);
+
         Wardrobe wardrobe = Wardrobe.getInstance();
         wardrobe.setcBuilder(new Suit());
-
-        rooster.crow(czArrList);
 
         ConcreteMediator chatRoom = new ConcreteMediator();
         Farmer farmer = new Farmer(chatRoom, wardrobe);
@@ -65,9 +75,6 @@ public class StoryOne {
 
         farmer.contact("Pig, you are super admin");
         superVisor.contact("OK, I get it");
-
-        farmer.wear();
-        farmer.breedAnimal(rooster);
 
         superVisor.addSuperVisor((Pig) czArrList.get(11));
 
@@ -99,7 +106,7 @@ public class StoryOne {
 
         OpExpressionEnum plus = OpExpressionEnum.PlusExpression;
         int result = new BinaryExpression(new NumberExpression(8), plus, new NumberExpression(2)).interpret();
-        System.out.println("Two hours later, the time is " + result + " am");
+        Logger.i("Two hours later, the time is " + result + " am");
 
         Monkey monkey = (Monkey) czArrList.get(8);
         Goat goat = (Goat) czArrList.get(7);

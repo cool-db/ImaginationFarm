@@ -1,7 +1,7 @@
 package imaginationfarm.story.chooseOutfits;
 
-import imaginationfarm.abst.cloth.ClothBuilder;
-import imaginationfarm.spirit.cloths.*;
+import imaginationfarm.spirit.item.cloths.ClothBuilder;
+import imaginationfarm.spirit.item.cloths.*;
 
 public class ChoosOutfits {
     public static void chooseOutfits() {

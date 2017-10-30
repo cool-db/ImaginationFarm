@@ -1,5 +1,6 @@
 package imaginationfarm.spirit.charactor;
 
+import imaginationfarm.abst.logger.Logger;
 import imaginationfarm.abst.mediator.Colleague;
 import imaginationfarm.abst.mediator.Mediator;
 
@@ -13,6 +14,6 @@ public class SuColleague extends Colleague {
 
     @Override
     public void getMessage(String message) {
-        System.out.println("SuperVisor get the message: " + message);
+        Logger.i("SuperVisor get the message: " + message);
     }
 }

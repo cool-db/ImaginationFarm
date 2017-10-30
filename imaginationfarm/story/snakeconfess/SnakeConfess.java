@@ -1,7 +1,7 @@
 package imaginationfarm.story.snakeconfess;
 
-import imaginationfarm.spirit.snake.Chicken;
-import imaginationfarm.spirit.snake.Snake;
+import imaginationfarm.spirit.item.snake.Chicken;
+import imaginationfarm.spirit.item.snake.Snake;
 
 public class SnakeConfess {
     public static void snakeConfess() {
