@@ -1,4 +1,4 @@
-package imaginationfarm.test;
+package imaginationfarm.old;
 
 import imaginationfarm.abst.singlecharacter.*;
 import imaginationfarm.spirit.item.buildingshape.*;
