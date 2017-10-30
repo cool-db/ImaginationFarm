@@ -14,6 +14,10 @@ public class Farmer extends Colleague {
         wardrobe = wd;
     }
 
+    public Farmer(Mediator m) {
+        super(m);
+    }
+
     @Override
     public void getMessage(String message) {
         Logger.i("Farmer get the message: " + message);
