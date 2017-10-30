@@ -1,6 +1,5 @@
 package imaginationfarm.story.bakeCake;
-import imaginationfarm.spirit.cakes.*;
-import imaginationfarm.abst.cake.*;
+import imaginationfarm.spirit.item.cakes.*;
 
 public class BakeCake {
 	private CakeType[] cakeList = {CakeType.GRASS, CakeType.STRAWBERRY, CakeType.GRASS, CakeType.CHOCOLATE, CakeType.STRAWBERRY, CakeType.GRASS};;

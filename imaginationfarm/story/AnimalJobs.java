@@ -1,9 +1,9 @@
 package imaginationfarm.story;
 
-import imaginationfarm.spirit.strategySpirit.ChickenWork;
-import imaginationfarm.spirit.strategySpirit.CowWork;
-import imaginationfarm.spirit.strategySpirit.MouseWork;
-import imaginationfarm.spirit.strategySpirit.PigGirlWork;
+import imaginationfarm.spirit.item.strategySpirit.ChickenWork;
+import imaginationfarm.spirit.item.strategySpirit.CowWork;
+import imaginationfarm.spirit.item.strategySpirit.MouseWork;
+import imaginationfarm.spirit.item.strategySpirit.PigGirlWork;
 
 public class AnimalJobs {
 

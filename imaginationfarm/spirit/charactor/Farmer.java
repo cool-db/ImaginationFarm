@@ -1,6 +1,6 @@
 package imaginationfarm.spirit.charactor;
 
-import imaginationfarm.spirit.cloths.Wardrobe;
+import imaginationfarm.spirit.item.cloths.Wardrobe;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.ChineseZodiac;
 
 public class Farmer {

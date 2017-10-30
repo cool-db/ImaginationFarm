@@ -1,8 +1,8 @@
 package imaginationfarm.story.girlToPig;
 
-import imaginationfarm.spirit.girlToPig.Caretaker;
-import imaginationfarm.spirit.girlToPig.GirlState;
-import imaginationfarm.spirit.girlToPig.stateCategory;
+import imaginationfarm.spirit.activity.girlToPig.Caretaker;
+import imaginationfarm.spirit.activity.girlToPig.GirlState;
+import imaginationfarm.spirit.activity.girlToPig.stateCategory;
 
 public class GirlTurnToPig {
     public static void girlTurnToPig() {

@@ -1,21 +1,21 @@
 package imaginationfarm.application;
 
-import imaginationfarm.abst.cake.Cake;
+import imaginationfarm.spirit.item.cakes.Cake;
 import imaginationfarm.abst.interpret.BinaryExpression;
 import imaginationfarm.abst.interpret.NumberExpression;
 import imaginationfarm.abst.interpret.OpExpressionEnum;
 import imaginationfarm.spirit.activity.*;
 import imaginationfarm.spirit.charactor.Farmer;
 import imaginationfarm.spirit.charactor.SuperVisor;
-import imaginationfarm.spirit.cloths.Suit;
-import imaginationfarm.spirit.cloths.Wardrobe;
+import imaginationfarm.spirit.item.cloths.Suit;
+import imaginationfarm.spirit.item.cloths.Wardrobe;
 import imaginationfarm.spirit.creature.animal.AnimalFactory;
 import imaginationfarm.spirit.creature.animal.chineseZodiac.*;
 import imaginationfarm.spirit.item.Crisper;
 import imaginationfarm.spirit.item.Refrigerator;
 import imaginationfarm.spirit.item.breakfirst.Meal;
-import imaginationfarm.spirit.visitor.FarmForVisitor;
-import imaginationfarm.spirit.visitor.FarmVisitor;
+import imaginationfarm.spirit.place.FarmForVisitor;
+import imaginationfarm.spirit.place.FarmVisitor;
 import imaginationfarm.story.action.CheckStateAction;
 import imaginationfarm.story.action.VisitAction;
 import imaginationfarm.story.bakeCake.BakeCake;

@@ -1,6 +1,6 @@
 package imaginationfarm.abst.abstIter;
 
-import imaginationfarm.spirit.IterSpirits.Animals;
+import imaginationfarm.spirit.item.IterSpirits.Animals;
 
 public interface Commander {
     Animals next();

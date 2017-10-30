@@ -1,8 +1,8 @@
 package imaginationfarm.story.action;
 
 import imaginationfarm.spirit.creature.animal.chineseZodiac.ChineseZodiac;
-import imaginationfarm.spirit.visitor.FarmPart;
-import imaginationfarm.spirit.visitor.FarmVisitor;
+import imaginationfarm.spirit.place.FarmPart;
+import imaginationfarm.spirit.place.FarmVisitor;
 
 public class VisitAction implements Action {
     private FarmPart place;
